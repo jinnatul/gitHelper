@@ -6,7 +6,7 @@
     - [Download Git](#download-git)
     - [Initialization and initial commit](#initialization-and-initial-commit)
     - [Using diff and making additional commit](#using-diff-and-making-additional-commit)
-    - [Include your signature in commit]()
+    - [Include your signature in commit](#include-your-signature-in-commit)
     - [Let's push commit so far]()
     - [Changing the commit (including commits from the remote repository)]()
     - [cancel add]()
@@ -104,3 +104,18 @@
     - git commit -m "report card: Print grades of each subject"
   - Check four commit so far
     - git log
+
+
+## Include your signature in commit
+  - Change or overwrite the contents of the report_card.c source file in the commit5 folder and check
+    - git diff
+  - If you confirm the change through diff, proceed to add command
+    - git add report_card.c
+  - Commit with signature (Include signatures with the -s option.)
+    - git commit -sm "report card: Show the sum of each grade"
+  - Change or overwrite the contents of the report_card.c source file in the commit6 folder and check
+    - git diff
+  - If you confirm the change through diff, proceed to add command
+    - git add report_card.c
+  - Commit with signature
+    - git commit -sm "report card: Get a average of grades"
