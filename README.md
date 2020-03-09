@@ -3,9 +3,9 @@
 **Table of Contents:**
   - [What is Git?](#What is Git?)
   - Let’s Do it
-    - [Download Git](#Download Git)
-    - [Initialization and initial commit](#Initialization and initial commit)
-    - [Using diff and making additional commit]()
+    - [Download Git](#download-git)
+    - [Initialization and initial commit](#initialization-and-initial-commit)
+    - [Using diff and making additional commit](#using-diff-and-making-additional-commit)
     - [Include your signature in commit]()
     - [Let's push commit so far]()
     - [Changing the commit (including commits from the remote repository)]()
@@ -65,6 +65,7 @@
     - $ sudo apt-get upgrade
     - $ sudo apt-get install git
 
+
 ## Initialization and initial commit
   - Go to HOME path (~)
     - cd ~
@@ -83,3 +84,23 @@
   - commit (make history unit)
     - git commit -m "report card: Add base code"
     
+    
+## Using diff and making additional commit
+  - Check the status
+    - git status
+  - Change or overwrite the contents of the report_card.c source file in the commit3 folder and check
+    - git diff
+  - If you confirm the change through diff, proceed to add command
+    - git add report_card.c
+  - Commit the prepared source file
+    - git commit -m "report card: Print a message of introduction"
+  - Check three commit so far
+    - git log
+  - Change or overwrite the contents of the report_card.c source file in the commit4 folder and check
+    - git diff
+  - If you confirm the change through diff, proceed to add command
+    - git add report_card.c
+  - Commit the prepared source file
+    - git commit -m "report card: Print grades of each subject"
+  - Check four commit so far
+    - git log
