@@ -7,7 +7,7 @@
     - [Initialization and initial commit](#initialization-and-initial-commit)
     - [Using diff and making additional commit](#using-diff-and-making-additional-commit)
     - [Include your signature in commit](#include-your-signature-in-commit)
-    - [Let's push commit so far]()
+    - [Let's push commit so far](#lets-push-commit-so-far)
     - [Changing the commit (including commits from the remote repository)]()
     - [cancel add]()
     - [Clearing the commit]()
@@ -119,3 +119,16 @@
     - git add report_card.c
   - Commit with signature
     - git commit -sm "report card: Get a average of grades"
+
+
+## Let's push commit so far
+  - Check the status and check the current branch name master.
+    - git status
+  - Check the commit so far (if not six, check again)
+    - git shortlog
+  - Register Github remote repository URL(Pause and turn on http://github.com and create a new repository)
+  - Register Github remote repository with the copied URL (except for '<' and '>')
+    - git remote add origin <copy URL>
+  - Now let's push the work to the Github remote repository (origin).
+    - git push origin master
+  - Open and view the Github remote repository
