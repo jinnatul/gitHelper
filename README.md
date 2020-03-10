@@ -8,7 +8,7 @@
     - [Using diff and making additional commit](#using-diff-and-making-additional-commit)
     - [Include your signature in commit](#include-your-signature-in-commit)
     - [Let's push commit so far](#lets-push-commit-so-far)
-    - [Changing the commit (including commits from the remote repository)]()
+    - [Changing the commit (including commits from the remote repository)](#changing-the-commit-including-commits-from-the-remote-repository)
     - [cancel add]()
     - [Clearing the commit]()
       - [Clearing the commit (Advanced)]()
@@ -132,3 +132,19 @@
   - Now let's push the work to the Github remote repository (origin).
     - git push origin master
   - Open and view the Github remote repository
+
+
+## Changing the commit (including commits from the remote repository)
+  - Assume that you change the 'Mean' variable name in report_card.cto 'Average’ (use source in commit6-1 folder)
+    - git diff
+  - If you confirm the change through diff, proceed to add command
+    - git add report_card.c
+  - Edit the comment at the top of the commit(save and close it when you open a registered editor program such as the vi editor)
+    - git commit --amend
+  - Let's push it right away (crash error)
+    - git push origin master
+  - Force push to change local repositories to remote repositories (use the --force or -f option)
+    - git push origin master --force
+  - Let's go back to Githuband see if it changed properly.
+
+
