@@ -14,7 +14,7 @@
       - [Clearing the commit (Advanced)](#clearing-the-commit-advanced)
       - [revert](#revert)
     - [Pull Request](#pull-request)
-    - [Merge]()
+    - [Merge](#merge)
     - [Rebase]()
     - [Rebase --interactive]()
     - [blame]()
@@ -227,6 +227,21 @@
     - git commit –m "your_namepull request test"
   - Push to the develop branch of the forked repository (note: not master)
     - git push origin develop
+
+
+## Merge
+  - Make sure that your just-in-progress develop branch is the current branch (also visible as status)
+    - git branch
+  - Let's create an additional branch
+    - git checkout -b test
+  - Create an empty file with touch and make a commit
+    - touch test
+    - git add test
+    - git commit -m "test"
+  - Merge additional branches (test) based on the current branch (develop).
+    - git checkout develop
+    - git status
+    - git merge test
 
 
 
