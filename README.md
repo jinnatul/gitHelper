@@ -197,10 +197,10 @@
 
 ## Revert
 - Revert single commit
-- git revert commit_idex) 
-- git revert 2664ce8
+  - git revert commit_idex) 
+  - git revert 2664ce8
 - If you need to commit multiple commits at onc
-- git revert start_commit_id...end_commit_id
+  - git revert start_commit_id...end_commit_id
 
 
 ## Pull Request
