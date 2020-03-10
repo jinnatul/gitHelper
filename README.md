@@ -13,7 +13,7 @@
     - [Clearing the commit](#clearing-the-commit)
       - [Clearing the commit (Advanced)](#clearing-the-commit-advanced)
       - [revert](#revert)
-    - [Pull Request]()
+    - [Pull Request](#pull-request)
     - [Merge]()
     - [Rebase]()
     - [Rebase --interactive]()
@@ -201,4 +201,32 @@
 - git revert 2664ce8
 - If you need to commit multiple commits at onc
 - git revert start_commit_id...end_commit_id
+
+
+## Pull Request
+  - Go to https://github.com/jinnatul/git-helper
+  - Click Fork Button
+  - Downloading Forked Project 
+    - git clone project_url_forked_in_your_account
+  - Move Clone Project Directory (If directory name is git-training-1, move to there)
+  - cd clone_project_directory_name
+  - Create branch (develop) for pull-request
+    - git checkout -b develop
+  - Move pull_request_testdirectory
+  - cd pull_request_test
+  - Create a directory with your name
+  - mkdir your_name
+  - Copy any files in Directory
+  - cp any_file Or
+  - touch any_name.txt
+  - Go to Parent Directory
+  - cd ..
+  - Add the working directory
+    - git add your_name
+  - Prepared files commit
+    - git commit –m "your_namepull request test"
+  - Push to the develop branch of the forked repository (note: not master)
+    - git push origin develop
+
+
 
