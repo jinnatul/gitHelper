@@ -10,7 +10,7 @@
     - [Let's push commit so far](#lets-push-commit-so-far)
     - [Changing the commit (including commits from the remote repository)](#changing-the-commit-including-commits-from-the-remote-repository)
     - [Cancel add](#cancel-add)
-    - [Clearing the commit]()
+    - [Clearing the commit](#clearing-the-commit)
       - [Clearing the commit (Advanced)]()
       - [revert]()
     - [Pull Request]()
@@ -158,4 +158,23 @@
   - Check your current status again
     - git status
     
-    
+  
+## Clearing the commit
+  - Make sure the test file still exists (re-create it if you deleted it)
+    - git status
+  - Make some wrong commit. (Can execute commands consecutively)
+    - git add test; git commit -sm“test”
+  - Then push and apply the wrong commit to the tree in Github.
+    - git push origin master
+  - And clears the most recent commit.
+    - git reset HEAD~1
+  - Force push to the remote repository tree to clear the wrong commit.
+    - git push origin master --force
+  - Commit is canceled and the files are staged and saved in working directory
+    - git reset --soft HEAD^
+  - Commit is canceled and the files are unstagedand saved in the working directory.
+    - git reset --mixed HEAD^ // Default option
+    - git reset HEAD^ // Same as above
+    - git reset HEAD~2 // Cancel last two commit
+  - Commit is canceled and the files are unstagedand deleted from the working directory
+    - git reset --hard HEAD^
