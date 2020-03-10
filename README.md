@@ -12,7 +12,7 @@
     - [Cancel add](#cancel-add)
     - [Clearing the commit](#clearing-the-commit)
       - [Clearing the commit (Advanced)](#clearing-the-commit-advanced)
-      - [revert]()
+      - [revert](#revert)
     - [Pull Request]()
     - [Merge]()
     - [Rebase]()
@@ -194,4 +194,11 @@
     - git push origin + branch_name
     - git push origin +master
 
+
+## Revert
+- Revert single commit
+- git revert commit_idex) 
+- git revert 2664ce8
+- If you need to commit multiple commits at onc
+- git revert start_commit_id...end_commit_id
 
