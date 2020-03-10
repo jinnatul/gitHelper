@@ -9,7 +9,7 @@
     - [Include your signature in commit](#include-your-signature-in-commit)
     - [Let's push commit so far](#lets-push-commit-so-far)
     - [Changing the commit (including commits from the remote repository)](#changing-the-commit-including-commits-from-the-remote-repository)
-    - [cancel add]()
+    - [Cancel add](#cancel-add)
     - [Clearing the commit]()
       - [Clearing the commit (Advanced)]()
       - [revert]()
@@ -148,3 +148,14 @@
   - Let's go back to Githuband see if it changed properly.
 
 
+## Cancel add
+  - Create and add an empty file with touch (it is possible to execute commands consecutively with ';')
+    - touch test; git add test
+  - Check your current status
+    - git status
+  - Let's cancel the add command with reset command.
+    - git reset
+  - Check your current status again
+    - git status
+    
+    
