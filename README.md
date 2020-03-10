@@ -11,7 +11,7 @@
     - [Changing the commit (including commits from the remote repository)](#changing-the-commit-including-commits-from-the-remote-repository)
     - [Cancel add](#cancel-add)
     - [Clearing the commit](#clearing-the-commit)
-      - [Clearing the commit (Advanced)]()
+      - [Clearing the commit (Advanced)](#clearing-the-commit-advanced)
       - [revert]()
     - [Pull Request]()
     - [Merge]()
@@ -178,3 +178,20 @@
     - git reset HEAD~2 // Cancel last two commit
   - Commit is canceled and the files are unstagedand deleted from the working directory
     - git reset --hard HEAD^
+
+
+## Clearing the commit (Advanced)
+  - Return to commit in the working directory-Cancels the most recent commit and returns the working directory
+    - git reset HEAD^  //Cancel the most recent commit (default option: --mixed)-Check your commit history
+    - git reflog  //Reflog(the branch and commit that HEAD has pointed to in the last few months) or     
+    - git log –g  //Return the working directory to the desired point in time
+    - git reset HEAD@numberor 
+    - git reset commit_id
+  - Commit again with reverted
+    - git commit -m "Write commit messages"
+  - Force push to remote storage
+    - git push origin branch_name–f or 
+    - git push origin + branch_name
+    - git push origin +master
+
+
