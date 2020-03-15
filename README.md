@@ -16,8 +16,8 @@
     - [Pull Request](#pull-request)
     - [Merge](#merge)
     - [Rebase](#rebase)
-    - [Rebase --interactive](#rebase-interactive)
-    - [blame]()
+    - [Rebase --interactive](#rebase--interactive)
+    - [blame](#blame)
     - [clean]()
     - [gitignore]()
   - Types & Usage of Git Branch
@@ -254,7 +254,7 @@
     - git rebase upstream/develop
 
 
-## Rebase --interactive
+## Rebase--interactive
   - Select the commit to modify
     - git rebase -i--root
   - When the vi editor opens, delete the word "pick" at the beginning of the commit lines you want to edit,write "edit" instead, and exit the editor.
@@ -265,3 +265,10 @@
     - git rebase --continue
 
 
+## Blame
+  - Identify which file, who modified which line.
+    - git blame report_card.c
+  - Check commit information at the time using commit ID
+    - git show <commit ID>
+  
+  
