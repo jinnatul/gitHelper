@@ -15,7 +15,7 @@
       - [revert](#revert)
     - [Pull Request](#pull-request)
     - [Merge](#merge)
-    - [Rebase]()
+    - [Rebase](#rebase)
     - [Rebase --interactive]()
     - [blame]()
     - [clean]()
@@ -243,5 +243,13 @@
     - git status
     - git merge test
 
-
+## Rebase
+  - On Stage 8, go to the project path that was cloned after the fork and add upstream(This is not your project URL)
+    - git remote add upstream https://github.com/jinnatul/git-helper.git
+  - get upstream'sdevelop branch.
+    - git fetch upstream develop
+  - Make sure your current branch is develop
+    - git status
+  - Rebase
+    - git rebase upstream/develop
 
