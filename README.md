@@ -19,7 +19,7 @@
     - [Rebase --interactive](#rebase--interactive)
     - [blame](#blame)
     - [clean](#clean)
-    - [gitignore]()
+    - [gitignore](#gitignore)
   - Types & Usage of Git Branch
     - [Master Branch]()
     - [Develop Branch]()
@@ -278,4 +278,17 @@
   - git clean -f -d -x // Delete even ignored files
 
   
-  
+## Gitignore
+  - Move to the top level directory where the .git file is located(The .gitignorefile can be created in the same directory as the .git file.)
+    - Make .gitignore
+    - touch .gitignore // Since .gitignoreis a hidden file, I confirm that it is generated properly in the following two ways.
+  - Edit .gitignore
+  - vi .gitignore
+  - Delete all caches in the current repository.
+    - git rm -r --cached 
+  - Delete the file corresponding to file_namefrom the remote repository.(Do not delete files in the local repository)
+    - git rm -r --cached file_name
+  - Set to track all other files again, except for the list of files put in .gitignore.
+    - git add .
+    - git commit -m "Fixed untracked files"
+
