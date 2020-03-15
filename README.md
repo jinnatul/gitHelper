@@ -16,7 +16,7 @@
     - [Pull Request](#pull-request)
     - [Merge](#merge)
     - [Rebase](#rebase)
-    - [Rebase --interactive]()
+    - [Rebase --interactive](#rebase-interactive)
     - [blame]()
     - [clean]()
     - [gitignore]()
@@ -252,4 +252,16 @@
     - git status
   - Rebase
     - git rebase upstream/develop
+
+
+## Rebase --interactive
+  - Select the commit to modify
+    - git rebase -i--root
+  - When the vi editor opens, delete the word "pick" at the beginning of the commit lines you want to edit,write "edit" instead, and exit the editor.
+  - Check status and check if rebase is normal
+    - git status
+  - Modify the commit information and finish with --continue
+    - git commit --amend
+    - git rebase --continue
+
 
