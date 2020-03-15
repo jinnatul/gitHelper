@@ -18,7 +18,7 @@
     - [Rebase](#rebase)
     - [Rebase --interactive](#rebase--interactive)
     - [blame](#blame)
-    - [clean]()
+    - [clean](#clean)
     - [gitignore]()
   - Types & Usage of Git Branch
     - [Master Branch]()
@@ -270,5 +270,12 @@
     - git blame report_card.c
   - Check commit information at the time using commit ID
     - git show <commit ID>
+  
+
+## Clean
+  - git clean -f // Only delete files except directories
+  - git clean -f -d // Delete directory inclusion
+  - git clean -f -d -x // Delete even ignored files
+
   
   
