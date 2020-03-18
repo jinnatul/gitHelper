@@ -24,7 +24,7 @@
     - [Master Branch]()
     - [Develop Branch]()
     - [Feature Branch]()
-    - [Feature Branch creation & termination]()
+    - [Feature Branch creation & termination](#feature-branch-creation)
     - [Release Branch]()
     - [Release Branch creation & termination]()
     - [Hotfix Branch]()
@@ -292,3 +292,17 @@
     - git add .
     - git commit -m "Fixed untracked files"
 
+
+## Feature Branch creation
+  - Branch the feature branch (feature/login) on the 'develop' branch. (not in the 'master' branch!)
+    - git checkout -b feature/login develop 
+  - Move to the 'develop' branch
+    - git checkout develop
+  - Merge the contents of the feature/login branch into the 'develop' branch
+    - git merge --no-ff feature/login// --no-ff option: additional description below
+    - git branch -d feature/login// -d option: Delete the branch corresponding to feature/login.
+  - Put the 'develop' branch on the remote repository
+    - git push origin develop
+  
+  
+  
