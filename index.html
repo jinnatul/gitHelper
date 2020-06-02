@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+        <title>Git Helpher</title>
+        
+        <!--CSS section-->
+        <link rel="stylesheet" href="assets/lib/materialize/css/materialize.min.css">
+        <link rel="stylesheet" href="assets/lib/materialize/css/icon.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <style>
+            main{
+                display:none
+            }
+        </style>
+    </head>
+
+    <body>
+    
+        <!--Header section-->
+        <header>
+            <div class="navbar-fixed">
+                <nav id="navClass">
+                    <div>
+                      <a href="#home"><img id="appLogo" class="left" src="assets/img/logo2.png" alt="" srcset="">
+                        <span style="color: black; font-size: xx-large;">Git Helpher</span></a>
+                        <ul class="right">
+                            <li><a class="scroll" href="#home">Home</a></li>
+                            <li><a class="scroll" href="#branchs">Git-Branchs</a></li>
+                            <li><a class="scroll" href="#branchsWorkflow">Branch-Workflow</a></li>
+                            <li><a class="scroll" href="#forkingWorkflow">Forking-Workflow</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!--preloader component-->
+            <div class="mainLoader">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+            <!--Scrolling button-->
+            <div class="fixed-action-btn">
+                <a
+                class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+                data-position="left"
+                data-tooltip="Top"
+                id="scrollTop"
+                onclick="toTop()"
+                >
+                <i class="large material-icons">arrow_upward</i>
+                </a>
+            </div>
+        
+            <!--Git-Basic section-->
+            <section id="home">
+                <div class="customContainer">
+                    <h4 class="center-align headerText">Git-Basic</h4>
+                    <div class="row">
+                        <div id="git_basic"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Git-Branchs section-->
+            <section id="branchs">
+                <div class="customContainer">
+                    <h4 class="center-align headerText">Git-Branchs</h4>
+                    <div class="row">
+                        <div id="git_branchs"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Branch-Workflow section-->
+            <section id="branchsWorkflow">
+                <div class="customContainer">
+                    <h4 class="center-align headerText">Branch-Workflow</h4>
+                    <div class="row">
+                        <div id="git_branchsWorkflow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Forking-Workflow section-->
+            <section id="forkingWorkflow">
+                <div class="customContainer">
+                    <h4 class="center-align headerText">Forking-Workflow</h4>
+                    <div class="row">
+                        <div id="git_forkingWorkflow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer -->
+            <footer class="page-footer blue-grey darken-3">
+                <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                    <h5 class="white-text">
+                      Git-Helper
+                    </h5>
+                    <p class="grey-text text-lighten-4">
+                        For any kind of queries you can
+                        <a href="mailto:morolswediu@gmail.com">Email</a> us or create
+                        an
+                        <a
+                        href="https://github.com/jinnatul/gitHelper/issues"
+                        target="_blank"
+                        rel="noopener"
+                        >issue</a>
+                        in github. If you like our work please give a star in our
+                        <a
+                        href="https://github.com/jinnatul/gitHelper"
+                        target="_blank"
+                        rel="noopener"
+                        >repository.</a>
+                    </p>
+                    <br />
+                    </div>
+                    <img class="right" style="height: 150px;" src="assets/img/me.png" alt="my image" srcset="">
+                </div>
+                </div>
+                <div class="footer-copyright">
+                <div class="container">
+                    © 2020 Copyright <a 
+                        href="https://github.com/jinnatul" 
+                        target="_blank"
+                        >
+                        Morol
+                    </a>
+                    <a  id="myName"
+                        class="grey-text text-lighten-4 right"
+                        href="https://www.facebook.com/mdjinnatul.islam"
+                        target="_blank"
+                        rel="noopener"
+                        >Md. Jinnatul Islam
+                    </a>
+                </div>
+                </div>
+            </footer>
+
+        </main>
+        
+        <!--Script section-->
+        <script src="assets/lib/jquery/jquery.min.js"></script>
+        <script src="assets/lib/materialize/js/materialize.min.js"></script>
+        <script src="assets/js/index.js"></script>
+        <script src="assets/js/array.js"></script>
+        <script src="assets/js/dateTime.js"></script>
+        <script src="assets/js/dom.js"></script>
+        <script src="assets/js/function.js"></script>
+        <script src="assets/js/misc.js"></script>
+        <script src="assets/js/number.js"></script>
+        <script src="assets/js/object.js"></script>
+        <script src="assets/js/string.js"></script>
+        <script>
+            window.onscroll = scroll1;
+            function scroll1() {
+              var toTop = document.getElementById("scrollTop");
+              window.scrollY > 500
+                ? (toTop.style.display = "Block")
+                : (toTop.style.display = "none");
+            }
+      
+            function toTop() {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }
+        </script>
+    </body>
+</html>
