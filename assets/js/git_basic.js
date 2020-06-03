@@ -39,24 +39,79 @@ $(function() {
   + "<h6>$ Initialization and initial commit</h6></div>"
   + "<div class='collapsible-body codejs center'>"+ initializationAndInitialCommit() +"</div></li>"
 
-  // 
+  // Using diff and making additional commit
   + "<li><div class='collapsible-header'>"
-  + "<h6>$ </h6></div>"
+  + "<h6>$ Using diff and making additional commit</h6></div>"
   + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
-  // 
+  // Include your signature in commit
   + "<li><div class='collapsible-header'>"
-  + "<h6>$ </h6></div>"
+  + "<h6>$ Include your signature in commit</h6></div>"
   + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
-  // 
+  // Let's push commit so far
   + "<li><div class='collapsible-header'>"
-  + "<h6>$ </h6></div>"
+  + "<h6>$ Let's push commit so far</h6></div>"
   + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
-  // 
+  // Changing the commit (including commits from the remote repository)
   + "<li><div class='collapsible-header'>"
-  + "<h6>$ </h6></div>"
+  + "<h6>$ Changing the commit (including commits from the remote repository)</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Cancel add
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Cancel add</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Clearing the commit
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Clearing the commit</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Clearing the commit (Advanced)
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Clearing the commit (Advanced)</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // revert
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ revert</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Pull Request
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Pull Request</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Merge
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Merge</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Rebase
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Rebase</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // Rebase --interactive
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Rebase --interactive</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // blame
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ blame</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // clean
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ clean</h6></div>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+
+  // gitignore
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ gitignore</h6></div>"
   + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
   $('#git_basic').html(gitInfo);
