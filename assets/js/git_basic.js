@@ -32,39 +32,40 @@ $(function() {
   // Download Git
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Download Git</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ downloadGit() +"</div></li>"
+  + "<div class='collapsible-body codejs center'>"+ downloadGit() +"</div></li>"
+
+  // Initialization and initial commit
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ Initialization and initial commit</h6></div>"
+  + "<div class='collapsible-body codejs center'>"+ initializationAndInitialCommit() +"</div></li>"
 
   // 
   + "<li><div class='collapsible-header'>"
   + "<h6>$ </h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
   // 
   + "<li><div class='collapsible-header'>"
   + "<h6>$ </h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
   // 
   + "<li><div class='collapsible-header'>"
   + "<h6>$ </h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
   // 
   + "<li><div class='collapsible-header'>"
   + "<h6>$ </h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p></div></li>"
-
-  // 
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ </h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
 
   $('#git_basic').html(gitInfo);
 
 })
 
 function downloadGit() {
-  let code = "<code>- <span class='codejs-header'>Windows :</span><br>"
+  let code = "<code>"
+  + "- <span class='codejs-header'>Windows :</span><br>"
   + "<a href='https://git-scm.com/download/win' target='_blank'>[Download]</a> and Install program then "
   + "run the git bash icon.<br><br>"
   + "- <span class='codejs-header'>Mac :</span><br>"
@@ -76,5 +77,27 @@ function downloadGit() {
   + "$ <span class='codejs-cmd'>sudo apt-get upgrade</span><br>"
   + "$ <span class='codejs-cmd'>sudo apt-get install git</span><br>"
   + "</code>"
+  return code;
+}
+
+function initializationAndInitialCommit() {
+  let code = "<code>"
+  + "Go to HOME path (~)<br>"
+  + "- cd ~<br><br>"
+  + "Create git-training folder<br>"
+  + "- mkdir <span class='blue accent-1'>git</span>-training<br><br>"
+  + "Move the path (check the current path with the pwd command)<br>"
+  + "- cd <span class='blue accent-1'>git</span>-training<br><br>"
+  + "Initialize the folder git (see the .git folder created with the ls -A command)<br>"
+  + "- <span class='blue accent-1'>git</span> init<br><br>"
+  + "Add PDF file (add to commit list add) (use file in commit1 folder)<br>"
+  + "- <span class='blue accent-1'>git</span> add report_card.pdf<br><br>"
+  + "Making the first commit (creating a unit of history)<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'report card: Add question PDF'<br><br>"
+  + "Add source code (add to commit list add) (use files in commit2 folder)<br>"
+  + "- <span class='blue accent-1'>git</span> add report_card.c<br><br>"
+  + "commit (make history unit)<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'report card: Add base code'<br><br>"
+  +"</code>"
   return code;
 }
