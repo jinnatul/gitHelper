@@ -52,10 +52,24 @@ body {
 .codejs{
     overflow-x:auto;
     padding:.5em;
-    background:#0d122c;
-    color:#f8f8f2;
+    background:#fff;
+    color:#000000;
 }
 
 .codejs-keyword {
-    color:#07ff3d
+    color:#0099ff;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.codejs-cmd {
+    color: #783baa;
+}
+
+.codejs-header {
+    color: #ff1100;
+}
+
+.fontSize {
+    font-size: 105%;
 }
