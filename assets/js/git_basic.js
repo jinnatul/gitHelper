@@ -52,7 +52,7 @@ $(function() {
   // Let's push commit so far
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Let's push commit so far</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ letsPushCommitSoFar() +"</div></li>"
 
   // Changing the commit (including commits from the remote repository)
   + "<li><div class='collapsible-header'>"
@@ -195,6 +195,23 @@ function includeYourSignatureInCommit() {
   + "- <span class='blue accent-1'>git</span> add report_card.c<br><br>"
   + "Commit with signature<br>"
   + "- <span class='blue accent-1'>git</span> commit -sm 'report card: Get a average of grades'<br><br>"
+  + "</code>"
+  return code;
+}
+
+function letsPushCommitSoFar() {
+  let code = "<code>"
+  + "Check the status and check the current branch name master.<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "Check the commit so far (if not six, check again)<br>"
+  + "- <span class='blue accent-1'>git</span> shortlog<br><br>"
+  + "Register <span class='codejs-keyword'>GitHub</span> remote repository URL(Pause and turn "
+  + "on http://github.com and create a new repository)<br>Register <span class='codejs-keyword'>"
+  + "GitHub</span> remote repository with the copied URL (except for '<' and '>')<br>"
+  + "- <span class='blue accent-1'>git</span> remote add origin <copy URL><br><br>"
+  + "Now let's push the work to the <span class='codejs-keyword'>GitHub</span> remote repository (origin).<br>"
+  + "- <span class='blue accent-1'>git</span> push origin master<br><br>"
+  + "Open and view the <span class='codejs-keyword'>GitHub</span> remote repository'<br>"
   + "</code>"
   return code;
 }
