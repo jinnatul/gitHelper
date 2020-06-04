@@ -32,17 +32,17 @@ $(function() {
   // Download Git
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Download Git</h6></div>"
-  + "<div class='collapsible-body codejs center'>"+ downloadGit() +"</div></li>"
+  + "<div class='collapsible-body codejs'>"+ downloadGit() +"</div></li>"
 
   // Initialization and initial commit
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Initialization and initial commit</h6></div>"
-  + "<div class='collapsible-body codejs center'>"+ initializationAndInitialCommit() +"</div></li>"
+  + "<div class='collapsible-body codejs'>"+ initializationAndInitialCommit() +"</div></li>"
 
   // Using diff and making additional commit
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Using diff and making additional commit</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ usingDiffAndMakingAdditionalCommit() +"</div></li>"
 
   // Include your signature in commit
   + "<li><div class='collapsible-header'>"
@@ -153,6 +153,30 @@ function initializationAndInitialCommit() {
   + "- <span class='blue accent-1'>git</span> add report_card.c<br><br>"
   + "commit (make history unit)<br>"
   + "- <span class='blue accent-1'>git</span> commit -m 'report card: Add base code'<br><br>"
+  +"</code>"
+  return code;
+}
+
+function usingDiffAndMakingAdditionalCommit() {
+  let code = "<code>"
+  + "Check the status<br>"
+  + "- <span class='blue accent-1'>git</span> status<br>"
+  + "Change or overwrite the contents of the report_card.c source file in the commit3 folder and check<br>"
+  + "- <span class='blue accent-1'>git</span> diff<br>"
+  + "If you confirm the change through diff, proceed to add command<br>"
+  + "- <span class='blue accent-1'>git</span> add report_card.c<br>"
+  + "Commit the prepared source file<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'report card: Print a message of introduction'<br>"
+  + "Check three commit so far<br>"
+  + "- <span class='blue accent-1'>git</span> log<br>"
+  + "Change or overwrite the contents of the report_card.c source file in the commit4 folder and check<br>"
+  + "- <span class='blue accent-1'>git</span> diff<br>"
+  + "If you confirm the change through diff, proceed to add command<br>"
+  + "- <span class='blue accent-1'>git</span> add report_card.c<br>"
+  + "Commit the prepared source file<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'report card: Print grades of each subject'<br>"
+  + "Check four commit so far<br>"
+  + "- <span class='blue accent-1'>git</span> log<br>"
   +"</code>"
   return code;
 }
