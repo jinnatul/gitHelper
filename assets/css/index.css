@@ -51,7 +51,7 @@ body {
 /* Code elements */
 .codejs{
     overflow-x:auto;
-    padding:.5em;
+    margin: 5px 5px 5px 5px;
     background:#fff;
     color:#000000;
 }
