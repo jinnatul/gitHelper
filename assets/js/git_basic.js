@@ -62,7 +62,7 @@ $(function() {
   // Cancel add
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Cancel add</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ cancelAdd() +"</div></li>"
 
   // Clearing the commit
   + "<li><div class='collapsible-header'>"
@@ -229,6 +229,21 @@ function changingTheCommit() {
   + "Force push to change local repositories to remote repositories (use the --force or -f option)<br>"
   + "- <span class='blue accent-1'>git</span> push origin master --force<br><br>"
   + "Let's go back to Githuband see if it changed properly.<br>"
+  + "</code>"
+  return code;
+}
+
+function cancelAdd() {
+  let code = "<code>"
+  + "Create and add an empty file with touch (it is possible to execute commands consecutively with ';')<br>"
+  + "- touch test;<br>" 
+  + "- <span class='blue accent-1'>git</span> add test<br><br>"
+  + "Check your current status<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "Let's cancel the add command with reset command.<br>"
+  + "- <span class='blue accent-1'>git</span> reset<br><br>"
+  + "Check your current status again<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
   + "</code>"
   return code;
 }
