@@ -57,7 +57,7 @@ $(function() {
   // Changing the commit (including commits from the remote repository)
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Changing the commit (including commits from the remote repository)</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ changingTheCommit() +"</div></li>"
 
   // Cancel add
   + "<li><div class='collapsible-header'>"
@@ -212,6 +212,23 @@ function letsPushCommitSoFar() {
   + "Now let's push the work to the <span class='codejs-keyword'>GitHub</span> remote repository (origin).<br>"
   + "- <span class='blue accent-1'>git</span> push origin master<br><br>"
   + "Open and view the <span class='codejs-keyword'>GitHub</span> remote repository'<br>"
+  + "</code>"
+  return code;
+}
+
+function changingTheCommit() {
+  let code = "<code>"
+  + "Assume that you change the 'Mean' variable name in report_card.cto 'Average’ (use source in commit6-1 folder)<br>"
+  + "- <span class='blue accent-1'>git</span> diff<br><br>"
+  + "If you confirm the change through diff, proceed to add command<br>"
+  + "- <span class='blue accent-1'>git</span> add report_card.c<br><br>"
+  + "Edit the comment at the top of the commit(save and close it when you open a registered editor program such as the vi editor)<br>"
+  + "- <span class='blue accent-1'>git</span> commit --amend<br><br>"
+  + "Let's push it right away (crash error)<br>"
+  + "- <span class='blue accent-1'>git</span> push origin master<br><br>"
+  + "Force push to change local repositories to remote repositories (use the --force or -f option)<br>"
+  + "- <span class='blue accent-1'>git</span> push origin master --force<br><br>"
+  + "Let's go back to Githuband see if it changed properly.<br>"
   + "</code>"
   return code;
 }
