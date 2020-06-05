@@ -67,7 +67,7 @@ $(function() {
   // Clearing the commit
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Clearing the commit</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ clearingTheCommit() +"</div></li>"
 
   // Clearing the commit (Advanced)
   + "<li><div class='collapsible-header'>"
@@ -244,6 +244,31 @@ function cancelAdd() {
   + "- <span class='blue accent-1'>git</span> reset<br><br>"
   + "Check your current status again<br>"
   + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "</code>"
+  return code;
+}
+
+function clearingTheCommit() {
+  let code = "<code>"
+  + "Make sure the test file still exists (re-create it if you deleted it)<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "Make some wrong commit. (Can execute commands consecutively)<br>"
+  + "- <span class='blue accent-1'>git</span> add test;<br>"
+  + "- <span class='blue accent-1'>git</span> commit -sm'test'<br><br>"
+  + "Then push and apply the wrong commit to the tree in <span class='codejs-keyword'>GitHub</span>.<br>"
+  + "- <span class='blue accent-1'>git</span> push origin master<br><br>"
+  + "And clears the most recent commit.<br>"
+  + "- <span class='blue accent-1'>git</span> reset HEAD~1<br><br>"
+  + "Force push to the remote repository tree to clear the wrong commit.<br>"
+  + "- <span class='blue accent-1'>git</span> push origin master --force<br><br>"
+  + "Commit is canceled and the files are staged and saved in working directory<br>"
+  + "- <span class='blue accent-1'>git</span> reset --soft HEAD^<br><br>"
+  + "Commit is canceled and the files are unstagedand saved in the working directory.<br>"
+  + "- <span class='blue accent-1'>git</span> reset --mixed HEAD^ // Default option<br>"
+  + "- <span class='blue accent-1'>git</span> reset HEAD^ // Same as above<br>"
+  + "- <span class='blue accent-1'>git</span> reset HEAD~2 // Cancel last two commit<br><br>"
+  + "Commit is canceled and the files are unstagedand deleted from the working directory<br>"
+  + "- <span class='blue accent-1'>git</span> reset --hard HEAD^<br>"
   + "</code>"
   return code;
 }
