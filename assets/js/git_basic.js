@@ -112,7 +112,7 @@ $(function() {
   // gitignore
   + "<li><div class='collapsible-header'>"
   + "<h6>$ gitignore</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ gitignore() +"</div></li>"
 
   $('#git_basic').html(gitInfo);
 
@@ -309,20 +309,20 @@ function revert() {
 function pullRequest() {
   let code = "<code>"
   + "Go to <span class='orange accent-1'>https://github.com/jinnatul/gitHelper</span><br>"
-  + "- Click Fork Button<br>"
+  + "- Click Fork Button<br><br>"
   + "Downloading Forked Project<br>" 
-  + "- <span class='blue accent-1'>git</span> clone project_url_forked_in_your_account<br>"
+  + "- <span class='blue accent-1'>git</span> clone project_url_forked_in_your_account<br><br>"
   + "Move Clone Project Directory (If directory name is git-training-1, move to there)<br>"
   + "- cd clone_project_directory_name<br><br>"
   + "Create branch (develop) for pull-request<br>"
-  + "- <span class='blue accent-1'>git</span> checkout -b develop<br>"
+  + "- <span class='blue accent-1'>git</span> checkout -b develop<br><br>"
   + "Move pull_request_testdirectory<br>"
   + "- cd pull_request_test<br><br>"
   + "Create a directory with your name<br>"
-  + "- mkdir your_name<br>"
+  + "- mkdir your_name<br><br>"
   + "Copy any files in Directory<br>"
   + "- cp any_file Or<br>"
-  + "- touch any_name.txt<br>"
+  + "- touch any_name.txt<br><br>"
   + "Go to Parent Directory<br>"
   + "- cd ..<br><br>"
   + "Add the working directory<br>"
@@ -397,6 +397,27 @@ function clean() {
   + "- <span class='blue accent-1'>git</span> clean -f // Only delete files except directories<br>"
   + "- <span class='blue accent-1'>git</span> clean -f -d // Delete directory inclusion<br>"
   + "- <span class='blue accent-1'>git</span> clean -f -d -x // Delete even ignored files<br>"
+  + "</code>"
+  return code;
+}
+
+function gitignore() {
+  let code = "<code>"
+  + "Move to the top level directory where the .git file is located(The <span class='cyan accent-1'>"
+  + ".gitignore</span> file can be created in the same directory as the .git file.)<br><br>Make "
+  + "<span class='cyan accent-1'>.gitignore</span><br>"
+  + "- touch <span class='cyan accent-1'>.gitignore</span> // Since <span class='cyan accent-1'>"
+  + ".gitignore</span> a hidden file, I confirm that it is generated properly in the "
+  + "following two ways.<br><br>Edit <span class='cyan accent-1'>.gitignore</span><br><br>"
+  + "Delete all caches in the current repository.<br>"
+  + "- <span class='blue accent-1'>git</span> rm -r --cached<br><br>" 
+  + "Delete the file corresponding to file_namefrom the remote repository.(Do not delete files in the "
+  + "local repository)<br>"
+  + "- <span class='blue accent-1'>git</span> rm -r --cached file_name<br><br>"
+  + "Set to track all other files again, except for the list of files put in <span class='cyan "
+  + "accent-1'>.gitignore</span>.<br>"
+  + "- <span class='blue accent-1'>git</span> add .<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'Fixed untracked files'"
   + "</code>"
   return code;
 }
