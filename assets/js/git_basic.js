@@ -107,7 +107,7 @@ $(function() {
   // clean
   + "<li><div class='collapsible-header'>"
   + "<h6>$ clean</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ clean() +"</div></li>"
 
   // gitignore
   + "<li><div class='collapsible-header'>"
@@ -388,6 +388,15 @@ function blame() {
   + "- <span class='blue accent-1'>git</span> blame report_card.c<br><br>"
   + "Check commit information at the time using commit ID<br>"
   + "- <span class='blue accent-1'>git</span> show <commit ID><br>"
+  + "</code>"
+  return code;
+}
+
+function clean() {
+  let code = "<code>"
+  + "- <span class='blue accent-1'>git</span> clean -f // Only delete files except directories<br>"
+  + "- <span class='blue accent-1'>git</span> clean -f -d // Delete directory inclusion<br>"
+  + "- <span class='blue accent-1'>git</span> clean -f -d -x // Delete even ignored files<br>"
   + "</code>"
   return code;
 }
