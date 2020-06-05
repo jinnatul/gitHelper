@@ -77,7 +77,7 @@ $(function() {
   // revert
   + "<li><div class='collapsible-header'>"
   + "<h6>$ revert</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ revert() +"</div></li>"
 
   // Pull Request
   + "<li><div class='collapsible-header'>"
@@ -291,6 +291,17 @@ function clearingTheCommit_Advanced() {
   + "- <span class='blue accent-1'>git</span> push origin branch_name–f or<br>" 
   + "- <span class='blue accent-1'>git</span> push origin + branch_name<br>"
   + "- <span class='blue accent-1'>git</span> push origin +master<br>"
+  + "</code>"
+  return code;
+}
+
+function revert() {
+  let code = "<code>"
+  + "Revert single commit<br>"
+  + "- <span class='blue accent-1'>git</span> revert commit_idex<br>" 
+  + "- <span class='blue accent-1'>git</span> revert 2664ce8<br><br>"
+  + "If you need to commit multiple commits at onc<br>"
+  + "- <span class='blue accent-1'>git</span> revert start_commit_id...end_commit_id<br>"
   + "</code>"
   return code;
 }
