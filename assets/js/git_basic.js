@@ -102,7 +102,7 @@ $(function() {
   // blame
   + "<li><div class='collapsible-header'>"
   + "<h6>$ blame</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ blame() +"</div></li>"
 
   // clean
   + "<li><div class='collapsible-header'>"
@@ -378,6 +378,16 @@ function rebaseInteractive() {
   + "Modify the commit information and finish with --continue<br>"
   + "- <span class='blue accent-1'>git</span> commit --amend<br>"
   + "- <span class='blue accent-1'>git</span> rebase --continue<br>"
+  + "</code>"
+  return code;
+}
+
+function blame() {
+  let code = "<code>"
+  + "Identify which file, who modified which line.<br>"
+  + "- <span class='blue accent-1'>git</span> blame report_card.c<br><br>"
+  + "Check commit information at the time using commit ID<br>"
+  + "- <span class='blue accent-1'>git</span> show <commit ID><br>"
   + "</code>"
   return code;
 }
