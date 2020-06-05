@@ -82,7 +82,7 @@ $(function() {
   // Pull Request
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Pull Request</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ pullRequest() +"</div></li>"
 
   // Merge
   + "<li><div class='collapsible-header'>"
@@ -302,6 +302,35 @@ function revert() {
   + "- <span class='blue accent-1'>git</span> revert 2664ce8<br><br>"
   + "If you need to commit multiple commits at onc<br>"
   + "- <span class='blue accent-1'>git</span> revert start_commit_id...end_commit_id<br>"
+  + "</code>"
+  return code;
+}
+
+function pullRequest() {
+  let code = "<code>"
+  + "Go to https://github.com/jinnatul/gitHelper<br>"
+  + "- Click Fork Button<br>"
+  + "Downloading Forked Project<br>" 
+  + "- <span class='blue accent-1'>git</span> clone project_url_forked_in_your_account<br>"
+  + "Move Clone Project Directory (If directory name is git-training-1, move to there)<br>"
+  + "- cd clone_project_directory_name<br><br>"
+  + "Create branch (develop) for pull-request<br>"
+  + "- <span class='blue accent-1'>git</span> checkout -b develop<br>"
+  + "Move pull_request_testdirectory<br>"
+  + "- cd pull_request_test<br><br>"
+  + "Create a directory with your name<br>"
+  + "- mkdir your_name<br>"
+  + "Copy any files in Directory<br>"
+  + "- cp any_file Or<br>"
+  + "- touch any_name.txt<br>"
+  + "Go to Parent Directory<br>"
+  + "- cd ..<br><br>"
+  + "Add the working directory<br>"
+  + "- <span class='blue accent-1'>git</span> add your_name<br><br>"
+  + "Prepared files commit<br>"
+  + "- <span class='blue accent-1'>git</span> commit –m 'your_namepull request test'<br><br>"
+  + "Push to the develop branch of the forked repository (note: not master)<br>"
+  + "- <span class='blue accent-1'>git</span> push origin develop<br>"
   + "</code>"
   return code;
 }
