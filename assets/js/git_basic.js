@@ -72,7 +72,7 @@ $(function() {
   // Clearing the commit (Advanced)
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Clearing the commit (Advanced)</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ clearingTheCommit_Advanced() +"</div></li>"
 
   // revert
   + "<li><div class='collapsible-header'>"
@@ -228,7 +228,7 @@ function changingTheCommit() {
   + "- <span class='blue accent-1'>git</span> push origin master<br><br>"
   + "Force push to change local repositories to remote repositories (use the --force or -f option)<br>"
   + "- <span class='blue accent-1'>git</span> push origin master --force<br><br>"
-  + "Let's go back to Githuband see if it changed properly.<br>"
+  + "Let's go back to <span class='codejs-keyword'>GitHub</span> and see if it changed properly.<br>"
   + "</code>"
   return code;
 }
@@ -269,6 +269,28 @@ function clearingTheCommit() {
   + "- <span class='blue accent-1'>git</span> reset HEAD~2 // Cancel last two commit<br><br>"
   + "Commit is canceled and the files are unstagedand deleted from the working directory<br>"
   + "- <span class='blue accent-1'>git</span> reset --hard HEAD^<br>"
+  + "</code>"
+  return code;
+}
+
+function clearingTheCommit_Advanced() {
+  let code = "<code>"
+  + "Return to commit in the working directory-Cancels the most recent commit and returns the working "
+  + "directory<br>"
+  + "- <span class='blue accent-1'>git</span> reset HEAD^  //Cancel the most recent commit (default "
+  + "option: --mixed)-Check your commit history<br>"
+  + "- <span class='blue accent-1'>git</span> reflog  //Reflog(the branch and commit that HEAD has "
+  + "pointed to in the last few months) or<br>"     
+  + "- <span class='blue accent-1'>git</span> log –g  //Return the working directory to the desired "
+  + "point in time<br>"
+  + "- <span class='blue accent-1'>git</span> reset HEAD@numberor<br>" 
+  + "- <span class='blue accent-1'>git</span> reset commit_id<br><br>"
+  + "Commit again with reverted<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'Write commit messages'<br><br>"
+  + "Force push to remote storage<br>"
+  + "- <span class='blue accent-1'>git</span> push origin branch_name–f or<br>" 
+  + "- <span class='blue accent-1'>git</span> push origin + branch_name<br>"
+  + "- <span class='blue accent-1'>git</span> push origin +master<br>"
   + "</code>"
   return code;
 }
