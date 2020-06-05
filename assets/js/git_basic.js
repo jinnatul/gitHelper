@@ -92,7 +92,7 @@ $(function() {
   // Rebase
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Rebase</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ rebase() +"</div></li>"
 
   // Rebase --interactive
   + "<li><div class='collapsible-header'>"
@@ -308,7 +308,7 @@ function revert() {
 
 function pullRequest() {
   let code = "<code>"
-  + "Go to https://github.com/jinnatul/gitHelper<br>"
+  + "Go to <span class='orange accent-1'>https://github.com/jinnatul/gitHelper</span><br>"
   + "- Click Fork Button<br>"
   + "Downloading Forked Project<br>" 
   + "- <span class='blue accent-1'>git</span> clone project_url_forked_in_your_account<br>"
@@ -349,6 +349,22 @@ function merge() {
   + "- <span class='blue accent-1'>git</span> checkout develop<br>"
   + "- <span class='blue accent-1'>git</span> status<br>"
   + "- <span class='blue accent-1'>git</span> merge test<br>"
+  + "</code>"
+  return code;
+}
+
+function rebase() {
+  let code = "<code>"
+  + "On Stage 8, go to the project path that was cloned after the fork and add upstream(This is not your "
+  + "project URL)<br>"
+  + "- <span class='blue accent-1'>git</span> remote add upstream <span class='orange accent-1'>"
+  + "https://github.com/jinnatul/gitHelper.git</span><br><br>"
+  + "get upstream'sdevelop branch.<br>"
+  + "- <span class='blue accent-1'>git</span> fetch upstream develop<br><br>"
+  + "Make sure your current branch is develop<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "Rebase<br>"
+  + "- <span class='blue accent-1'>git</span> rebase upstream/develop<br>"
   + "</code>"
   return code;
 }
