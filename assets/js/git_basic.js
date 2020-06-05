@@ -87,7 +87,7 @@ $(function() {
   // Merge
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Merge</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ merge() +"</div></li>"
 
   // Rebase
   + "<li><div class='collapsible-header'>"
@@ -331,6 +331,24 @@ function pullRequest() {
   + "- <span class='blue accent-1'>git</span> commit –m 'your_namepull request test'<br><br>"
   + "Push to the develop branch of the forked repository (note: not master)<br>"
   + "- <span class='blue accent-1'>git</span> push origin develop<br>"
+  + "</code>"
+  return code;
+}
+
+function merge() {
+  let code = "<code>"
+  + "Make sure that your just-in-progress develop branch is the current branch (also visible as status)<br>"
+  + "- <span class='blue accent-1'>git</span> branch<br><br>"
+  + "Let's create an additional branch<br>"
+  + "- <span class='blue accent-1'>git</span> checkout -b test<br><br>"
+  + "Create an empty file with touch and make a commit<br>"
+  + "- touch test<br>"
+  + "- <span class='blue accent-1'>git</span> add test<br>"
+  + "- <span class='blue accent-1'>git</span> commit -m 'test'<br><br>"
+  + "Merge additional branches (test) based on the current branch (develop).<br>"
+  + "- <span class='blue accent-1'>git</span> checkout develop<br>"
+  + "- <span class='blue accent-1'>git</span> status<br>"
+  + "- <span class='blue accent-1'>git</span> merge test<br>"
   + "</code>"
   return code;
 }
