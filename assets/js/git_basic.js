@@ -97,7 +97,7 @@ $(function() {
   // Rebase --interactive
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Rebase --interactive</h6></div>"
-  + "<div class='collapsible-body codejs'><p class='fontSize'></p></div></li>"
+  + "<div class='collapsible-body codejs'>"+ rebaseInteractive() +"</div></li>"
 
   // blame
   + "<li><div class='collapsible-header'>"
@@ -365,6 +365,19 @@ function rebase() {
   + "- <span class='blue accent-1'>git</span> status<br><br>"
   + "Rebase<br>"
   + "- <span class='blue accent-1'>git</span> rebase upstream/develop<br>"
+  + "</code>"
+  return code;
+}
+
+function rebaseInteractive() {
+  let code = "<code>"
+  + "Select the commit to modify<br>"
+  + "- <span class='blue accent-1'>git</span> rebase -i--root<br><br>"
+  + "Check status and check if rebase is normal<br>"
+  + "- <span class='blue accent-1'>git</span> status<br><br>"
+  + "Modify the commit information and finish with --continue<br>"
+  + "- <span class='blue accent-1'>git</span> commit --amend<br>"
+  + "- <span class='blue accent-1'>git</span> rebase --continue<br>"
   + "</code>"
   return code;
 }
