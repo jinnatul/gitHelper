@@ -27,7 +27,7 @@ $(function() {
   + "<span class='codejs-keyword'>Git</span> is an open-source tool developers install locally to manage "
   + "source code, while <span class='codejs-keyword'>GitHub</span> is an online service to which "
   + "developers who use <span class='codejs-keyword'>Git</span> can connect and upload or download "
-  + "resources.</div></li>"
+  + "resources.<img class='responsive-img' src='assets/img/git-github.jpg' alt='git-github'></div></li>"
 
   // Download Git
   + "<li><div class='collapsible-header'>"
