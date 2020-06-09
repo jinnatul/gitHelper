@@ -5,17 +5,20 @@ $(function() {
   // Master Branch
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Master Branch</h6></div>"
-  + "<div class='collapsible-body codejs'></div></li>"
+  + "<div class='collapsible-body codejs'><img class='responsive-img' "
+  + "src='assets/img/masterBranch.png' alt='masterBranch'></div></li>"
 
   // Develop Branch
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Develop Branch</h6></div>"
-  + "<div class='collapsible-body codejs'></div></li>"
+  + "<div class='collapsible-body codejs'><img class='responsive-img' "
+  + "src='assets/img/developBranch.png' alt='developBranch'></div></li>"
 
   // Feature Branch
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Feature Branch</h6></div>"
-  + "<div class='collapsible-body codejs'></div></li>"
+  + "<div class='collapsible-body codejs'><img class='responsive-img' "
+  + "src='assets/img/featureBranch.png' alt='featureBranch'></div></li>"
 
   // Feature Branch creation & termination
   + "<li><div class='collapsible-header'>"
