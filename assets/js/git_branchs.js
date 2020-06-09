@@ -23,7 +23,7 @@ $(function() {
   // Feature Branch creation & termination
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Feature Branch creation & termination</h6></div>"
-  + "<div class='collapsible-body codejs'></div></li>"
+  + "<div class='collapsible-body codejs'>"+ featureBranchCreation() +"</div></li>"
 
   // Release Branch
   + "<li><div class='collapsible-header'>"
@@ -53,3 +53,20 @@ $(function() {
   $('#git_branchs').html(gitInfo);
 
 })
+
+function featureBranchCreation() {
+  let code = "<code>"
+  + "Branch the feature branch (feature/login) on the 'develop' branch. (not in the 'master' branch!)<br>"
+  + "- <span class='blue accent-1'>git</span> checkout -b feature/login develop<br><br>" 
+  + "Move to the 'develop' branch<br>"
+  + "- <span class='blue accent-1'>git</span> checkout develop<br><br>"
+  + "Merge the contents of the feature/login branch into the 'develop' branch<br>"
+  + "- <span class='blue accent-1'>git</span> merge --no-ff feature/login// --no-ff option: additional "
+  + "description below<br>"
+  + "- <span class='blue accent-1'>git</span> branch -d feature/login// -d option: Delete the branch "
+  + "corresponding to feature/login.<br><br>"
+  + "Put the 'develop' branch on the remote repository<br>"
+  + "- <span class='blue accent-1'>git</span> push origin develop<br>"
+  + "</code>"
+  return code;
+}
