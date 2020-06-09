@@ -2,6 +2,11 @@ $(function() {
 
   let gitInfo = "<ul class='collapsible expandable'>"
 
+  // What is Feature Branch Workflow?
+  + "<li><div class='collapsible-header'>"
+  + "<h6>$ What is Feature Branch Workflow?</h6></div>"
+  + "<div class='collapsible-body codejs'>"+ whatIsFeatureBranchWorkflow() +"</div></li>"
+
   // Concept of Local Storage & Remote Storage
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Concept of Local Storage & Remote Storage</h6></div>"
@@ -45,3 +50,14 @@ $(function() {
   $('#git_branchsWorkflow').html(gitInfo);
 
 })
+
+function whatIsFeatureBranchWorkflow() {
+  let code = "<code>"
+  + "• Creating and working with functional branches.<br><br>"
+  + "• Many team members can safely develop new functions around the main code base (master).<br><br>"
+  + "• You can improve code quality by facilitating communication between team members.<br><br>"
+  + "• Flexible collaboration methods<br><br>"
+  + "• Collaboration method used in project of small number of people"
+  + "</code>"
+  return code;
+}
