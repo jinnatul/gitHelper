@@ -10,7 +10,10 @@ $(function() {
   // Concept of Local Storage & Remote Storage
   + "<li><div class='collapsible-header'>"
   + "<h6>$ Concept of Local Storage & Remote Storage</h6></div>"
-  + "<div class='collapsible-body codejs'></div></li>"
+  + "<div class='collapsible-body codejs'><img class='responsive-img' "
+  + "src='assets/img/connectLocalAndRemote.png' alt='connectLocalAndRemote'><h6>Concept of Central Remote "
+  + "Storage:</h6><img class='responsive-img' "
+  + "src='assets/img/connectCenterRemoteStorage.png' alt='connectCenterRemoteStorage'></div></li>"
 
   // Create a local repository with git clone
   + "<li><div class='collapsible-header'>"
