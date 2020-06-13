@@ -1,0 +1,705 @@
+{
+  "gitData": [
+    {
+      "title": "ইন্সটল (Setup)",
+      "items": [
+        {
+          "gitQus": "গিট ইনস্টল ম্যাক",
+          "gitAns": "brew install git"
+        }, 
+        {
+          "gitQus": "গিট আনইনস্টল ম্যাক",
+          "gitAns": "brew remove git"
+        }, 
+        {
+          "gitQus": "গিট আনইনস্টল উবুন্টু",
+          "gitAns": "sudo apt-get remove git"
+        }, 
+        {
+          "gitQus": "গিট ইনস্টল উবুন্টু",
+          "gitAns": "sudo apt-get install git"
+        }, 
+        {
+          "gitQus": "গিট ভার্সন চেক",
+          "gitAns": "git --version"
+        }, 
+        {
+          "gitQus": "গিটটি কোথায় রয়েছে তা দেখুন",
+          "gitAns": "which git"
+        }, 
+        {
+          "gitQus": "গিট সাহায্য",
+          "gitAns": "git help"
+        }
+      ]
+    },
+    {
+      "title": "কনফিগ (Config)",
+      "items": [
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার নেম সেট করা",
+          "gitAns": "git config --global user.name \"username\""
+        }, 
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার নেম চেক করা",
+          "gitAns": "git config --global user.name"
+        }, 
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার ইমেল সেট করা",
+          "gitAns": "git config --global user.email \"user@name.com\""
+        }, 
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার ইমেল চেক করা",
+          "gitAns": "git config --global user.email"
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার নেম সেট করা",
+          "gitAns": "git config user.name \"username\""
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার নেম চেক করা",
+          "gitAns": "git config user.name"
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার ইমেল সেট করা",
+          "gitAns": "git config user.email \"user@name.com\""
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার ইমেল চেক করা",
+          "gitAns": "git config user.email"
+        }, 
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার নেম বাতিল করা",
+          "gitAns": "git config --global --unset-all user.name"
+        }, 
+        {
+          "gitQus": "গিট এর গ্লোবাল ইউজার ইমেইল বাতিল করা",
+          "gitAns": "git config --global --unset-all user.email"
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার নেম বাতিল করা",
+          "gitAns": "git config --unset user.name"
+        }, 
+        {
+          "gitQus": "গিট এর লোকাল/একটি নির্দিষ্ট রিপোজিটরির ইউজার ইমেইল বাতিল করা",
+          "gitAns": "git config --unset user.email"
+        }, 
+        {
+          "gitQus": "একটি নির্দিষ্ট ব্রাঞ্চের জন্য ইউজার নেম, পাসওয়ার্ড সেভ করা",
+          "gitAns": "git config credential.helper store"
+        }, 
+        {
+          "gitQus": "সকল ব্রাঞ্চের জন্য ইউজার নেম, পাসওয়ার্ড সেভ করা",
+          "gitAns": "git config --global credential.helper store"
+        }
+      ]
+    },
+    {
+      "title": "সাধারণ (General)",
+      "items": [
+        {
+          "gitQus": "নতুন রিপোসিটোরি তৈরী করা",
+          "gitAns": "git init"
+        }, 
+        {
+          "gitQus": "কোনো রিপোসিটোরি ক্লোন করা(লোকাল মেশিনে ডাউনলোড করা)",
+          "gitAns": "git clone [url]"
+        }, 
+        {
+          "gitQus": "রিপোসিটোরি এর বর্তমান অবস্থা/পরিবর্তনগুলো দেখা (নতুন অথবা পুরোনো, কি কি ফাইল কমিট করতে হবে, ওয়ার্কিং ব্রাঞ্চ ইত্যাদি)",
+          "gitAns": "git status"
+        }, 
+        {
+          "gitQus": "কমিট এর জন্যে সব পরিবর্তিত ফাইল এড করা",
+          "gitAns": "git add OR git add . OR git add --all"
+        }, 
+        {
+          "gitQus": "কাস্টম ফাইল কমিট এর জন্যে এড করা ",
+          "gitAns": "git add index.html OR git add [file]"
+        }, 
+        {
+          "gitQus": "একটি নির্দিষ্ট এক্সটেনশন এর সকল ফাইল এড করা",
+          "gitAns": "git add *.ext"
+        }, 
+        {
+          "gitQus": "একটি নির্দিষ্ট ফোল্ডারের সকল ফাইল এড করা",
+          "gitAns": "git add /folder"
+        }, 
+        {
+          "gitQus": "একটি নির্দিষ্ট ফোল্ডারের একটি নির্দিষ্ট এক্সটেনশন এর সকল ফাইল এড করা",
+          "gitAns": "git add folder/*.ext"
+        }, 
+        {
+          "gitQus": "রিপোসিটোরি তে কিছু কমিট করা (কমিট মেসেজসহ)",
+          "gitAns": "git commit -m \"YourCommitMessage\""
+        }, 
+        {
+          "gitQus": "কমিট মেসেজ সংশোধন করা",
+          "gitAns": "git commit --amend -m \"your message\""
+        }, 
+        {
+          "gitQus": "টাইটেল এবং ডেসক্রিপশন সহ কমিট করতে",
+          "gitAns": "git commit -m \"Title\" -m \"Description...\""
+        }, 
+        {
+          "gitQus": "অ্যাড এবং কমিট এক স্টেপ এ করতে",
+          "gitAns": "git commit -am \"Message\""
+        }, 
+        {
+          "gitQus": "সমস্ত পরিবর্তন আপডেট করতে",
+          "gitAns": "git add -u"
+        }, 
+        {
+          "gitQus": "ফাইল রিমুভ করতে",
+          "gitAns": "git rm index.html"
+        }, 
+        {
+          "gitQus": "রিপোজিটরিতে এড করা ফাইল আনট্র্যাক করা",
+          "gitAns": "git rm --cached index.html OR git rm --cached filename"
+        }, 
+        {
+          "gitQus": "gitignore এ থাকা সকল ফাইল আনট্র্যাক করা",
+          "gitAns": "git rm -r --cached ."
+        }, 
+        {
+          "gitQus": "ফাইল মুভ অথবা রিনেইম করতে",
+          "gitAns": "git mv index.html dir/index_new.html"
+        }, 
+        {
+          "gitQus": "নির্দিষ্ট কমিট পরিবর্তন না করা (ফাইল সর্বশেষ কমিট ভার্সন থেকে রিস্টোর করতে)",
+          "gitAns": "git checkout -- index.html"
+        }, 
+        {
+          "gitQus": "সকল কমিট পরিবর্তন না করা",
+          "gitAns": "git checkout -- ."
+        }, 
+        {
+          "gitQus": "ফাইল কাস্টম কমিট ভার্সন থেকে রিস্টোর করতে (কারেন্ট ব্রাঞ্চ এ)",
+          "gitAns": "git checkout 6eb715d -- index.html"
+        }
+      ]
+    },
+    {
+      "title": "রিসেট (Reset)",
+      "items": [
+        {
+          "gitQus": "কমিট প্রত্যাবর্তন করা",
+          "gitAns": "git revert 073791e7dd71b90daa853b2c5acc2c925f02dbc6 OR git revert <commit hash>"
+        }, 
+        {
+          "gitQus": "নির্দিষ্ট কমিট প্রত্যাবর্তন করা",
+          "gitAns": "git revert -n <commit hash>"
+        }, 
+        {
+          "gitQus": "সফট রিসেট (move HEAD only; neither staging nor working dir is changed)",
+          "gitAns": "git reset --soft 073791e7dd71b90daa853b2c5acc2c925f02dbc6"
+        }, 
+        {
+          "gitQus": "শেষ কমিট থেকে stage এরিয়া তে মুভ করা",
+          "gitAns": "git reset --soft HEAD~"
+        }, 
+        {
+          "gitQus": "মিক্সেড রিসেট (move HEAD and change staging to match repo; does not affect working dir)",
+          "gitAns": "git reset --mixed 073791e7dd71b90daa853b2c5acc2c925f02dbc6"
+        }, 
+        {
+          "gitQus": "হার্ড রিসেট (move HEAD and change staging dir and working dir to match repo)",
+          "gitAns": "git reset --hard 073791e7dd71b90daa853b2c5acc2c925f02dbc6"
+        }, 
+        {
+          "gitQus": "শেষ কমিট ডিলেট করা",
+          "gitAns": "git reset --hard HEAD^"
+        }, 
+        {
+          "gitQus": "শেষ দুটি কমিট ডিলেট করা",
+          "gitAns": "git reset --hard HEAD^^"
+        }, 
+        {
+          "gitQus": "সিঙ্গেল ফাইল হার্ড রিসেট করতে (@ is short for HEAD)",
+          "gitAns": "git checkout @ -- index.html"
+        }
+      ]
+    },
+    {
+      "title": "আপডেট এবং ডিলিট (Update & Delete)",
+      "items": [
+        {
+          "gitQus": "আনট্র্যাক ফাইলগুলো টেস্ট ডিলিট করতে",
+          "gitAns": "git clean -n"
+        }, 
+        {
+          "gitQus": "আনট্র্যাক ফাইলগুলো ডিলিট করতে",
+          "gitAns": "git clean -f"
+        }, 
+        {
+          "gitQus": "আনস্টেজড (undo adds)",
+          "gitAns": "git reset HEAD index.html"
+        }
+      ]
+    },
+    {
+      "title": "ব্রাঞ্চ (Branch)",
+      "items": [
+        {
+          "gitQus": "সব লোকাল ব্রাঞ্চ এর নাম লিস্ট করা",
+          "gitAns": "git branch"
+        }, 
+        {
+          "gitQus": "নতুন ব্রাঞ্চ তৈরী",
+          "gitAns": "git branch [branch_name]"
+        }, 
+        {
+          "gitQus": "ব্রাঞ্চ চেঞ্জ করতে",
+          "gitAns": "git checkout [branch_name]"
+        }, 
+        {
+          "gitQus": "ব্রাঞ্চ তৈরী এবং চেঞ্জ করা",
+          "gitAns": "git checkout -b \"branch name\""
+        }, 
+        {
+          "gitQus": "রিপোজিটরি/ব্রাঞ্চ রিনেম করা",
+          "gitAns": "git branch -m branchname new_branchname OR git branch --move branchname new_branchname"
+        }, 
+        {
+          "gitQus": "কারেন্ট ব্রাঞ্চ এর সাথে মার্জ করা সকল ব্রাঞ্চগুলো শো করতে",
+          "gitAns": "git branch --merged"
+        }, 
+        {
+          "gitQus": "ব্রাঞ্চ রিমুভ করা (only possible if not HEAD)",
+          "gitAns": "git branch -d branchname OR git branch --delete branchname"
+        }, 
+        {
+          "gitQus": "রিমোট ব্রাঞ্চ রিমুভ করা",
+          "gitAns": "git push --delete origin [branch-name]"
+        }, 
+        {
+          "gitQus": "মার্জ করা না এমন ব্রাঞ্চ রিমুভ করতে",
+          "gitAns": "git branch -D branch_to_delete"
+        }
+      ]
+    },
+    {
+      "title": "মার্জ (Merge)",
+      "items": [
+        {
+          "gitQus": "ট্রু মার্জ (fast forward)",
+          "gitAns": "git merge branchname"
+        }, 
+        {
+          "gitQus": "মাস্টারে মার্জ করতে (only if fast forward)",
+          "gitAns": "git merge --ff-only branchname"
+        }, 
+        {
+          "gitQus": "মাস্টারে মার্জ করতে (force a new commit)",
+          "gitAns": "git merge --no-ff branchname"
+        }, 
+        {
+          "gitQus": "মার্জ বন্ধ করতে (in case of conflicts)",
+          "gitAns": "git merge --abort"
+        }, 
+        {
+          "gitQus": "মার্জ বন্ধ করতে  (in case of conflicts)",
+          "gitAns": "git reset --merge // prior to v1.7.4"
+        }, 
+        {
+          "gitQus": "লোকাল মার্জ  আন্ডু করতে যেই মার্জটি এখনো পুশ করা হইনাই",
+          "gitAns": "git reset --hard origin/master"
+        }, 
+        {
+          "gitQus": "স্পেসিফিক একটি কমিট মার্জ করতে",
+          "gitAns": "git cherry-pick 073791e7"
+        }, 
+        {
+          "gitQus": "রিবেস",
+          "gitAns": "git checkout branchname » git rebase master OR git merge master branchname"
+        }, 
+        {
+          "gitQus": "রিবেস ক্যানসেল করতে",
+          "gitAns": "git rebase --abort"
+        }, 
+        {
+          "gitQus": "মাল্টিপল কমিট একটি কমিট এ স্কোয়াশ করতে",
+          "gitAns": "git rebase -i HEAD~3 (source)"
+        }, 
+        {
+          "gitQus": "ফীচার ব্রাঞ্চ Squash-merge করতে (একটি কমিট এ)",
+          "gitAns": "git merge --squash branchname (commit afterwards)"
+        }
+      ]
+    },
+    {
+      "title": "স্টাশ (Stash)",
+      "items": [
+        {
+          "gitQus": "স্টাশ এ রাখতে",
+          "gitAns": "git stash save \"Message\""
+        }, 
+        {
+          "gitQus": "স্টাশ লিস্ট শো করতে",
+          "gitAns": "git stash list"
+        }, 
+        {
+          "gitQus": "স্টাশ স্ট্যাটাস শো করতে",
+          "gitAns": "git stash show stash@{0}"
+        }, 
+        {
+          "gitQus": "স্টাশ এর পরিবর্তনগুলি শো করতে",
+          "gitAns": "git stash show -p stash@{0}"
+        }, 
+        {
+          "gitQus": "কাস্টম স্টাশ আইটেম ব্যবহার এবং ড্রপ করতে",
+          "gitAns": "git stash pop stash@{0}"
+        }, 
+        {
+          "gitQus": "কাস্টম স্টাশ আইটেম ব্যবহার এবং ড্রপ না করতে",
+          "gitAns": "git stash apply stash@{0}"
+        }, 
+        {
+          "gitQus": "কাস্টম স্টাশ আইটেম ব্যবহার এবং ইনডেক্স করতে",
+          "gitAns": "git stash apply --index"
+        }, 
+        {
+          "gitQus": "স্টাশ থেকে নতুন ব্রাঞ্চ করতে",
+          "gitAns": "git stash branch new_branch"
+        }, 
+        {
+          "gitQus": "কাস্টম স্টাশ আইটেম বাদ দিতে",
+          "gitAns": "git stash drop stash@{0}"
+        }, 
+        {
+          "gitQus": "সম্পূর্ণ স্টাশ ডিলিট করতে",
+          "gitAns": "git stash clear"
+        }
+      ]
+    },
+    {
+      "title": "লগ (Log)",
+      "items": [
+        {
+          "gitQus": "কমিট লগ বিস্তারিত দেখতে",
+          "gitAns": "git log"
+        }, 
+        {
+          "gitQus": "এক লাইন এ কমিট লগ এর সামারি শো করতে",
+          "gitAns": "git log --oneline"
+        }, 
+        {
+          "gitQus": "এক লাইন এ কমিট লগ এর সামারি ফুল SHA-1 ফরম্যাট এ শো করতে",
+          "gitAns": "git log --format=oneline"
+        }, 
+        {
+          "gitQus": "কমিট লগ সামারি আকারে দেখতে((৫টি)",
+          "gitAns": "git log --oneline -5"
+        }, 
+        {
+          "gitQus": "শুধুমাত্র কাস্টম কমিটগুলো শো করতে",
+          "gitAns": "git log --author=\"Sven\" git log --grep=\"Message\" git log --until=2013-01-01 git log --since=2013-01-01"
+        }, 
+        {
+          "gitQus": "শুধুমাত্র কাস্টম কমিট এর ডাটা শো করতে",
+          "gitAns": "git log --format=short git log --format=full git log --format=fuller git log --format=email git log --format=raw"
+        }, 
+        {
+          "gitQus": "পরিবর্তনগুলি শো করতে",
+          "gitAns": "git log -p"
+        }, 
+        {
+          "gitQus": "শুধুমাত্র কাস্টম ফাইল এর সবগুলো কমিট শো করতে",
+          "gitAns": "git log 6eb715d.. index.html"
+        }, 
+        {
+          "gitQus": "শুধুমাত্র কাস্টম ফাইল এর সবগুলো কমিট এর পরিবর্তনগুলি শো করতে",
+          "gitAns": "git log -p 6eb715d.. index.html"
+        }, 
+        {
+          "gitQus": "কমিটগুলোর স্ট্যাটাস এবং সামারি শো করতে",
+          "gitAns": "git log --stat --summary"
+        }, 
+        {
+          "gitQus": "কমিটগুলোর হিস্ট্রি গ্রাফ আকারে শো করতে",
+          "gitAns": "git log --graph"
+        }, 
+        {
+          "gitQus": "কমিটগুলোর হিস্ট্রি গ্রাফ আকারে সামারি শো করতে",
+          "gitAns": "git log --oneline --graph --all --decorate"
+        }
+      ]
+    },
+    {
+      "title": "তুলনা (Compare)",
+      "items": [
+        {
+          "gitQus": "শেষ কমিট এবং বর্তমান unstaged ভার্শনের পার্থক্য দেখা",
+          "gitAns": "git diff"
+        }, 
+        {
+          "gitQus": "মডিফাইড ফাইলস তুলনা এবং পরিবর্তনগুলি হাইলাইট করতে",
+          "gitAns": "git diff --color-words index.html"
+        }, 
+        {
+          "gitQus": "শেষ কমিট এবং বর্তমান staged ভার্শনের পার্থক্য দেখা",
+          "gitAns": "git diff --staged"
+        }, 
+        {
+          "gitQus": "ব্রাঞ্চগুলো তুলনা করতে",
+          "gitAns": "git diff master..branchname"
+        }, 
+        {
+          "gitQus": "উপরের মত ব্রাঞ্চগুলো তুলনা করতে",
+          "gitAns": "git diff --color-words master..branchname^"
+        }, 
+        {
+          "gitQus": "কমিটগুলো তুলনা করতে",
+          "gitAns": "git diff 6eb715d git diff 6eb715d..HEAD git diff 6eb715d..537a09f"
+        }, 
+        {
+          "gitQus": "ফাইল এর কমিটগুলো তুলনা করতে",
+          "gitAns": "git diff 6eb715d index.html git diff 6eb715d..537a09f index.html"
+        }, 
+        {
+          "gitQus": "দরকারী তুলনা",
+          "gitAns": "git diff --stat --summary 6eb715d..HEAD"
+        }, 
+        {
+          "gitQus": "ব্ল্যাম",
+          "gitAns": "git blame -L10,+1 index.html"
+        }
+      ]
+    },
+    {
+      "title": "রিলিজ & ভার্সন (Releases & Version)",
+      "items": [
+        {
+          "gitQus": "ট্যাগ লিস্ট দেখতে",
+          "gitAns": "git tag"
+        }, 
+        {
+          "gitQus": "ট্যাগ তৈরি করা",
+          "gitAns": "git tag [tag-name]"
+        }, 
+        {
+          "gitQus": "প্রকাশিত সবগুলো ভার্শন কমিটগুলো সহ শো করতে",
+          "gitAns": "git tag -l -n1"
+        }, 
+        {
+          "gitQus": "রিলিজ ভার্শন তৈরী করতে",
+          "gitAns": "git tag v1.0.0"
+        }, 
+        {
+          "gitQus": "কমেন্টসহ রিলিজ ভার্শন তৈরী করতে",
+          "gitAns": "git tag -a v1.0.0 -m 'Message'"
+        }, 
+        {
+          "gitQus": "নির্দিষ্ট রিলিজ ভার্শনে চেকআউট করতে",
+          "gitAns": "git checkout v1.0.0"
+        }
+      ]
+    },
+    {
+      "title": "সহযোগিতা (Collaborate)",
+      "items": [
+        {
+          "gitQus": "রিমোট শো করতে",
+          "gitAns": "git remote"
+        }, 
+        {
+          "gitQus": "সবগুলো রিমোটের লিস্ট নাম এবং URL সহ দেখা",
+          "gitAns": "git remote -v"
+        }, 
+        {
+          "gitQus": "রিমোট এড করা",
+          "gitAns": "git remote add RemoteName RemoteURL"
+        }, 
+        {
+          "gitQus": "Fork রিপোসিটোরি ক্ষেত্রে আপস্ট্রিম রিমোট কনফিগার করা",
+          "gitAns": "git remote add upstream https://github.com/user/project.git"
+        }, 
+        {
+          "gitQus": "সার্ভারে আপস্ট্রিম রিমোট কনফিগার করা",
+          "gitAns": "git remote add upstream ssh://root@123.123.123.123/path/to/repository/.git"
+        }, 
+        {
+          "gitQus": "অন্য রিপোসিটোরি থেকে ব্রাঞ্চ/রেফ/অবজেক্ট fetch করা",
+          "gitAns": "git fetch RepositoryName"
+        }, 
+        {
+          "gitQus": "Fetch/Fork রিপোসিটোরি কে আপস্ট্রিম এর সাথে up-to-date রাখা",
+          "gitAns": "git fetch upstream"
+        }, 
+        {
+          "gitQus": "fetched কমিটগুলো মার্জ করতে",
+          "gitAns": "git merge upstream/master OR git merge upstream/branchname"
+        }, 
+        {
+          "gitQus": "কাস্টম ব্রাঞ্চ Fetch করতে",
+          "gitAns": "git fetch upstream branchname:local_branchname"
+        }, 
+        {
+          "gitQus": "অরিজিন রিমুভ করতে",
+          "gitAns": "git remote rm origin"
+        }, 
+        {
+          "gitQus": "সব রিমোট ব্রাঞ্চ এর নাম লিস্ট করা",
+          "gitAns": "git branch -r"
+        }, 
+        {
+          "gitQus": "সব লোকাল এবং রিমোট ব্রাঞ্চ এর নাম লিস্ট করা",
+          "gitAns": "git branch -a"
+        }, 
+        {
+          "gitQus": "রিমোট ব্রাঞ্চ থেকে ব্রাঞ্চ তৈরি এবং  চেকআউট করতে",
+          "gitAns": "git checkout -b local_branchname upstream/remote_branchname"
+        }, 
+        {
+          "gitQus": "রিপোসিটোরি তে লোকাল ব্রাঞ্চ থেকে আপলোড করা",
+          "gitAns": "git push -u origin master OR git push -u origin [branchName]"
+        }, 
+        {
+          "gitQus": "পুশ",
+          "gitAns": "git push origin master"
+        }, 
+        {
+          "gitQus": "ফোর্স পুশ",
+          "gitAns": "`git push origin master --force"
+        }, 
+        {
+          "gitQus": "রিপোসিটোরি থেকে নতুন চেঞ্জ গুলো পুল করা",
+          "gitAns": "git pull"
+        }, 
+        {
+          "gitQus": "স্পেসিফিক ব্রাঞ্চ পুল করতে",
+          "gitAns": "git pull origin branchname"
+        }, 
+        {
+          "gitQus": "কোনো রিপোসিটোরি ক্লোন করা(লোকাল মেশিনে ডাউনলোড করা)",
+          "gitAns": "git clone https://github.com/user/project.git OR git clone ssh://user@domain.com/~/dir/.git"
+        }, 
+        {
+          "gitQus": "লোকাল ফোল্ডার এ ক্লোন করতে",
+          "gitAns": "git clone https://github.com/user/project.git ~/dir/folder"
+        }, 
+        {
+          "gitQus": "স্পেসিফিক ব্রাঞ্চ লোকাল এ ক্লোন করতে",
+          "gitAns": "git clone -b branchname https://github.com/user/project.git"
+        }, 
+        {
+          "gitQus": "অথেনটিকেশন টোকেন ব্যবহার করে ক্লোন করতে",
+          "gitAns": "git clone https://oauth2:<token>@gitlab.com/username/repo.git"
+        }, 
+        {
+          "gitQus": "রিমোট ব্রাঞ্চ ডিলিট করতে",
+          "gitAns": "git push origin :branchname OR git push origin --delete branchname"
+        }, 
+        {
+          "gitQus": "কন্ট্রিবিউটরদের নামের লিস্ট দেখা",
+          "gitAns": "git shortlog -sn"
+        }, 
+        {
+          "gitQus": "কন্ট্রিবিউটরদের নাম এবং তাঁদের সকল কমিট লিস্ট আকারে দেখা",
+          "gitAns": "git shortlog"
+        }
+      ]
+    },
+    {
+      "title": "গিট্ ফ্লো (Git flow)",
+      "items": [
+        {
+          "gitQus": "গিট flow ইনস্টল ম্যাক(Homebrew)",
+          "gitAns": "brew install git-flow-avh"
+        }, 
+        {
+          "gitQus": "গিট flow ইনস্টল ম্যাক(Macports)",
+          "gitAns": "port install git-flow-avh"
+        }, 
+        {
+          "gitQus": "গিট flow ইনস্টল লিনাক্স",
+          "gitAns": "apt-get install git-flow"
+        }, 
+        {
+          "gitQus": "গিট flow ইনস্টল উইন্ডোজ",
+          "gitAns": "wget -q -O - --no-check-certificate https://raw.github.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh install stable | bash"
+        }, 
+        {
+          "gitQus": "গিট flow শুরু করা",
+          "gitAns": "git flow init"
+        }, 
+        {
+          "gitQus": "নতুন ফিচার শুরু করা",
+          "gitAns": "git flow feature start features_name"
+        }, 
+        {
+          "gitQus": "ফিচার শেষ করা",
+          "gitAns": "git flow feature finish features_name"
+        }, 
+        {
+          "gitQus": "ফিচার পাবলিশ করা",
+          "gitAns": "git flow feature publish features_name"
+        }, 
+        {
+          "gitQus": "ফিচার পুল করা",
+          "gitAns": "git flow feature pull origin features_name"
+        }, 
+        {
+          "gitQus": "ফিচার ট্র্যাক করা",
+          "gitAns": "git flow feature track features_name"
+        }, 
+        {
+          "gitQus": "রিলিজ শুরু করা",
+          "gitAns": "git flow release start RELEASE [BASE]"
+        }, 
+        {
+          "gitQus": "রিলিজ শেষ করা",
+          "gitAns": "git flow release finish RELEASE"
+        }, 
+        {
+          "gitQus": "রিলিজ পাবলিশ করা",
+          "gitAns": "git flow release publish RELEASE"
+        }, 
+        {
+          "gitQus": "রিলিজ ট্র্যাক করা",
+          "gitAns": "git flow release track RELEASE"
+        }, 
+        {
+          "gitQus": "হটফিক্স শুরু করা",
+          "gitAns": "git flow hotfix start VERSION [BASENAME]"
+        }, 
+        {
+          "gitQus": "হটফিক্স শেষ করা",
+          "gitAns": "git flow hotfix finish VERSION"
+        }
+      ]
+    },
+    {
+      "title": "গিটহাব ইস্যু (Github issues)",
+      "items": [
+        {
+          "gitAns": "close"
+        }, 
+        {
+          "gitAns": "closes"
+        }, 
+        {
+          "gitAns": "closed"
+        }, 
+        {
+          "gitAns": "fix"
+        }, 
+        {
+          "gitAns": "fixes"
+        }, 
+        {
+          "gitAns": "fixed"
+        }, 
+        {
+          "gitAns": "resolve"
+        }, 
+        {
+          "gitAns": "resolves"
+        }, 
+        {
+          "gitAns": "resolved"
+        }
+      ]
+    }
+  ]
+}
