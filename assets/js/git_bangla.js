@@ -15,7 +15,7 @@ $(function() {
       রিলিজ_এবং_ভারসন(res.gitData[10]);
       সহযোগিতা(res.gitData[11]);
       গিট_ফলো(res.gitData[12]);
-     //গিটহাব_ইসু(res.gitData[13]);
+      গিটহাব_ইসু(res.gitData[13]);
 
     })
     .fail(function() {
@@ -139,4 +139,15 @@ function গিট_ফলো(data) {
   }
   tableData += "</table>";
   $('#gitFlow').html(tableData);
+}
+
+function গিটহাব_ইসু(data) {
+  let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
+  for (let index = 0; index < data.items.length; index+=3) {
+    tableData += "<tr><td>"+ data.items[index].gitAns +"</td>";
+    tableData += "<td>"+ data.items[index + 1].gitAns +"</td>";
+    tableData += "<td>"+ data.items[index + 2].gitAns +"</td></tr>";
+  }
+  tableData += "</table>";
+  $('#gitIssues').html(tableData);
 }
