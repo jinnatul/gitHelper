@@ -9,6 +9,8 @@ $(function() {
       আপডেট_এবং_ডিলিট(res.gitData[4]);
       বাঞচ(res.gitData[5]);
       মারজ(res.gitData[6]);
+      সটাশ(res.gitData[7]);
+      লগ(res.gitData[8]);
 
     })
     .fail(function() {
@@ -78,4 +80,22 @@ function মারজ(data) {
   }
   tableData += "</table>";
   $('#gitMerge').html(tableData);
+}
+
+function সটাশ(data) {
+  let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
+  for (let index = 0; index < data.items.length; index++) {
+    tableData += "<tr><td>"+ data.items[index].gitQus +"</td><td>"+ data.items[index].gitAns +"</td></tr>";
+  }
+  tableData += "</table>";
+  $('#gitStash').html(tableData);
+}
+
+function লগ(data) {
+  let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
+  for (let index = 0; index < data.items.length; index++) {
+    tableData += "<tr><td>"+ data.items[index].gitQus +"</td><td>"+ data.items[index].gitAns +"</td></tr>";
+  }
+  tableData += "</table>";
+  $('#gitLog').html(tableData);
 }
