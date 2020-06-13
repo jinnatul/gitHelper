@@ -12,6 +12,7 @@ $(function() {
       সটাশ(res.gitData[7]);
       লগ(res.gitData[8]);
       তুলনা(res.gitData[9]);
+      রিলিজ_এবং_ভারসন(res.gitData[10]);
 
     })
     .fail(function() {
@@ -108,4 +109,13 @@ function তুলনা(data) {
   }
   tableData += "</table>";
   $('#gitCompare').html(tableData);
+}
+
+function রিলিজ_এবং_ভারসন(data) {
+  let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
+  for (let index = 0; index < data.items.length; index++) {
+    tableData += "<tr><td>"+ data.items[index].gitQus +"</td><td>"+ data.items[index].gitAns +"</td></tr>";
+  }
+  tableData += "</table>";
+  $('#gitReleasesVersion').html(tableData);
 }
