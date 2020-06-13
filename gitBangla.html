@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+    <title>Git Helpher</title>
+
+    <!--CSS section-->
+    <link rel="stylesheet" href="assets/lib/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/lib/materialize/css/icon.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        main{
+            display:none
+        }
+    </style>
+  </head>
+  <body>
+    <!--Header section-->
+    <header>
+      <div class="navbar-fixed">
+          <nav id="navClass">
+              <div>
+                <a href="#"><img id="appLogo" class="left" src="assets/img/logo.png" alt="" srcset="">
+                  <span style="color: black; font-size: xx-large;">গিট সাহায্যকারী</span></a>
+                  
+                  <!-- Dropdown Structure navbar -->
+                  <ul id="dropdown1" class="dropdown-content">
+                      <li><a class="scroll" href="#">ব্রাঞ্চ</a></li>
+                      <li><a class="scroll" href="#">মার্জ</a></li>
+                      <li><a class="scroll" href="#">স্টাশ</a></li>
+                      <li><a class="scroll" href="#">লগ</a></li>
+                      <li><a class="scroll" href="#">তুলনা</a></li>
+                      <li><a class="scroll" href="#">রিলিজ & ভার্সন</a></li>
+                      <li><a class="scroll" href="#">সহযোগিতা</a></li>
+                      <li><a class="scroll" href="#">গিট ফ্লো</a></li>
+                      <li><a class="scroll" href="#">গিটহাব ইস্যু</a></li>
+                  </ul>
+                  
+                  <!--Fixed navbar-->
+                  <ul class="right">
+                      <li><a class="scroll" href="#">ইন্সটল</a></li>
+                      <li><a class="scroll" href="#">কনফিগ</a></li>
+                      <li><a class="scroll" href="#">সাধারণ</a></li>
+                      <li><a class="scroll" href="#">রিসেট</a></li>
+                      <li><a class="scroll" href="#">আপডেট এবং ডিলিট</a></li>
+                      <!-- Dropdown Trigger -->
+                      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">অন্যান্য
+                        <i class="material-icons right">arrow_drop_down</i></a>
+                      </li>
+                      <li><a href="index.html">গিট-ইংরেজি</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </div>
+
+      <!--preloader component-->
+      <div class="mainLoader">
+          <div class="preloader-wrapper big active">
+              <div class="spinner-layer spinner-blue-only">
+              <div class="circle-clipper left">
+                  <div class="circle"></div>
+              </div>
+              <div class="gap-patch">
+                  <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right">
+                  <div class="circle"></div>
+              </div>
+              </div>
+          </div>
+      </div>
+    </header>
+
+    <!--Script section-->
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/materialize/js/materialize.min.js"></script>
+    <script src="assets/js/index.js"></script>
+
+  </body>
+</html>

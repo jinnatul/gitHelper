@@ -13,6 +13,9 @@ $(function() {
         $('.collapsible').collapsible();
     })
 
+    // navbar dropdown
+    $(".dropdown-trigger").dropdown();
+
     // Smooth scrolling
     var scrollLink = $(".scroll");
     scrollLink.click(function(e) {
