@@ -11,6 +11,7 @@ $(function() {
       মারজ(res.gitData[6]);
       সটাশ(res.gitData[7]);
       লগ(res.gitData[8]);
+      তুলনা(res.gitData[9]);
 
     })
     .fail(function() {
@@ -98,4 +99,13 @@ function লগ(data) {
   }
   tableData += "</table>";
   $('#gitLog').html(tableData);
+}
+
+function তুলনা(data) {
+  let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
+  for (let index = 0; index < data.items.length; index++) {
+    tableData += "<tr><td>"+ data.items[index].gitQus +"</td><td>"+ data.items[index].gitAns +"</td></tr>";
+  }
+  tableData += "</table>";
+  $('#gitCompare').html(tableData);
 }
