@@ -3,6 +3,10 @@ body {
     background: linear-gradient(to bottom right, #9be15d, #00e3ae);
 }
 
+.customContainerBangla {
+    margin: 2rem;
+}
+
 #navClass {
     background-color: rgb(33, 138, 174)
 }
