@@ -9,11 +9,11 @@ $(function () {
   // collapsible
   $(document).ready(function () {
     $(".collapsible").collapsible();
+    $(".dropdown-trigger").dropdown();
+    $(".sidenav").sidenav();
   });
 
   // navbar dropdown
-  $(".dropdown-trigger").dropdown();
-  $(".sidenav").sidenav();
 
   // Smooth scrolling
   var scrollLink = $(".scroll");

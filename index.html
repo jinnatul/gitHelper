@@ -48,7 +48,6 @@
                   >আপডেট এবং ডিলিট</a
                 >
               </li>
-              <!-- Dropdown Trigger -->
               <li>
                 <a
                   class="dropdown-trigger ulText"
@@ -57,7 +56,6 @@
                   >অন্যান্য
                   <i class="material-icons right">arrow_drop_down</i></a
                 >
-                <!-- Dropdown Structure navbar -->
                 <ul id="dropdown1" class="dropdown-content">
                   <li>
                     <a class="scroll ulText" href="#GitBranch">ব্রাঞ্চ</a>
@@ -121,7 +119,11 @@
             <li><a class="scroll ulText" href="#GitIssues">গিটহাব ইস্যু</a></li>
           </ul>
         </li>
-        <li><a class="ulText" href="gitEnglish.html">গিট-ইংরেজি</a></li>
+        <li>
+          <a class="ulText" href="gitEnglish.html"
+            ><i class="material-icons right">g_translate</i>গিট-ইংরেজি</a
+          >
+        </li>
       </ul>
 
       <!--preloader component-->
@@ -146,7 +148,9 @@
       <!--Scrolling button-->
       <div class="fixed-action-btn">
         <a
-          class="btn-floating btn-medium amber"
+          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+          data-position="left"
+          data-tooltip="Top"
           id="scrollTop"
           onclick="toTop()"
         >
@@ -154,189 +158,159 @@
         </a>
       </div>
 
-      <div class="customContainerBangla">
-        <!--Git Install-->
-        <section id="GitInstall">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitInstall"></div>
-                </div>
-              </div>
+      <!--Git Install-->
+      <section id="GitInstall">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitInstall"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Config-->
-        <section id="GitConfig">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitConfig"></div>
-                </div>
-              </div>
+      <!--Git Config-->
+      <section id="GitConfig">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitConfig"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git General-->
-        <section id="GitGeneral">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitGeneral"></div>
-                </div>
-              </div>
+      <!--Git General-->
+      <section id="GitGeneral">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitGeneral"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Reset-->
-        <section id="GitReset">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitReset"></div>
-                </div>
-              </div>
+      <!--Git Reset-->
+      <section id="GitReset">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitReset"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Update & Delete-->
-        <section id="GitUpdateDelete">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitUpdateDelete"></div>
-                </div>
-              </div>
+      <!--Git Update & Delete-->
+      <section id="GitUpdateDelete">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitUpdateDelete"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Branch-->
-        <section id="GitBranch">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitBranch"></div>
-                </div>
-              </div>
+      <!--Git Branch-->
+      <section id="GitBranch">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitBranch"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Merge-->
-        <section id="GitMerge">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitMerge"></div>
-                </div>
-              </div>
+      <!--Git Merge-->
+      <section id="GitMerge">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitMerge"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Stash-->
-        <section id="GitStash">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitStash"></div>
-                </div>
-              </div>
+      <!--Git Stash-->
+      <section id="GitStash">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitStash"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Log-->
-        <section id="GitLog">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitLog"></div>
-                </div>
-              </div>
+      <!--Git Log-->
+      <section id="GitLog">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitLog"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Compare-->
-        <section id="GitCompare">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitCompare"></div>
-                </div>
-              </div>
+      <!--Git Compare-->
+      <section id="GitCompare">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitCompare"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Releases & Version-->
-        <section id="GitReleasesVersion">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitReleasesVersion"></div>
-                </div>
-              </div>
+      <!--Git Releases & Version-->
+      <section id="GitReleasesVersion">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitReleasesVersion"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git Collaborate-->
-        <section id="GitCollaborate">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitCollaborate"></div>
-                </div>
-              </div>
+      <!--Git Collaborate-->
+      <section id="GitCollaborate">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitCollaborate"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Git flow-->
-        <section id="GitFlow">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitFlow"></div>
-                </div>
-              </div>
+      <!--Git flow-->
+      <section id="GitFlow">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitFlow"></div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!--Github issues-->
-        <section id="GitIssues">
-          <div class="row">
-            <div class="col s12">
-              <div class="card center-align hoverable">
-                <div class="card-content">
-                  <div id="gitIssues"></div>
-                </div>
-              </div>
+      <!--Github issues-->
+      <section id="GitIssues">
+        <div class="customContainer">
+          <div class="card center-align hoverable">
+            <div class="card-content">
+              <div id="gitIssues"></div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- footer -->
       <footer class="page-footer blue-grey darken-3">
