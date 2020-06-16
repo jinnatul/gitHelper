@@ -66,6 +66,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += cancelAdd(data[6], gitBasicStr);
   // Clearing the commit
   retrunStr += clearingTheCommit(data[7], gitBasicStr);
+  // Clearing the commit Advance
+  retrunStr += clearingTheCommitAdvance(data[8], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -186,13 +188,27 @@ function clearingTheCommit(data, gitBasicStr) {
 
 // Clearing the commit
 function clearingTheCommit(data, gitBasicStr) {
-  console.log(data);
   gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
   for (let index = 0; index < data.items.length; index++) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDclearing-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='clearing-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Clearing the commit Advance
+function clearingTheCommitAdvance(data, gitBasicStr) {
+  console.log(data);
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDclearingAd-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='clearingAd-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
