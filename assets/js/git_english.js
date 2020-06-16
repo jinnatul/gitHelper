@@ -80,6 +80,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += rebaseInteractive(data[13], gitBasicStr);
   // Blame
   retrunStr += blame(data[14], gitBasicStr);
+  // Clean
+  retrunStr += clean(data[15], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -305,6 +307,20 @@ function blame(data, gitBasicStr) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDblame-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='blame-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Clean
+function clean(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDclean-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='clean-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
