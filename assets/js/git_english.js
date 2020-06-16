@@ -56,7 +56,10 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += downloadGit(data[1], gitBasicStr);
   // Initialization and initial commit
   retrunStr += initializationAndInitialCommit(data[2], gitBasicStr);
+  // Using diff and making additional commit
+  retrunStr += usingDiffAndMakingAdditionalCommit(data[3], gitBasicStr);
 
+  
   $('#git_basic').html(retrunStr + "</ui>")
 }
 
@@ -92,13 +95,27 @@ function downloadGit(data, gitBasicStr) {
 
 // Initialization and initial commit
 function initializationAndInitialCommit(data, gitBasicStr) {
-  console.log(data);
   gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
   for (let index = 0; index < data.items.length; index++) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDinitialization-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='initialization-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Using diff and making additional commit
+function usingDiffAndMakingAdditionalCommit(data, gitBasicStr) {
+  console.log(data);
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDusingDiff-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='usingDiff-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";

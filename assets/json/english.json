@@ -88,7 +88,7 @@
       ]
     },
     {
-      "title": "$ Initialization and initial commit",
+      "title": "$ Using diff and making additional commit",
       "items": [
         {
           "gitQus": "Check the status",
