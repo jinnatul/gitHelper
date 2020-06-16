@@ -1,5 +1,5 @@
 {
-  "gitBasic": [
+  "data": [
     {
       "title": "$ What is Git?",
       "items": [
@@ -486,6 +486,64 @@
         {
           "gitQus": "",
           "gitAns": "git commit -m 'Fixed untracked files'"
+        }
+      ]
+    },
+    {
+      "title": "$ Feature Branch creation & termination",
+      "items": [
+        {
+          "gitQus": "Branch the feature branch (feature/login) on the 'develop' branch. (not in the 'master' branch!)",
+          "gitAns": "git checkout -b feature/login develop"
+        },
+        {
+          "gitQus": "Move to the 'develop' branch",
+          "gitAns": "git checkout develop"
+        },
+        {
+          "gitQus": "Merge the contents of the feature/login branch into the 'develop' branch",
+          "gitAns": "git merge --no-ff feature/login"
+        },
+        {
+          "gitQus": "Delete the branch corresponding to feature/login",
+          "gitAns": "git branch -d feature/login"
+        },
+        {
+          "gitQus": "Put the 'develop' branch on the remote repository",
+          "gitAns": "git push origin develop"
+        }
+      ]
+    },
+    {
+      "title": "$ Release Branch creation & termination",
+      "items": [
+        {
+          "gitQus": "branch from the release branch (release-1.2) to the 'develop' branch (not from the 'master' branch)",
+          "gitAns": "git checkout -b release-1.2 develop"
+        },
+        {
+          "gitQus": "Move to the 'master' branch.",
+          "gitAns": "git checkout master"
+        },
+        {
+          "gitQus": "Merge the contents of the release-1.2 branch into the 'master' branch.",
+          "gitAns": "git merge --no-ff release-1.2"
+        },
+        {
+          "gitQus": "Give the release version tag to the merged commit.",
+          "gitAns": "git tag -a 1.2"
+        },
+        {
+          "gitQus": "Go to the 'develop' branch.",
+          "gitAns": "git checkout develop"
+        },
+        {
+          "gitQus": "Merge the contents of the release-1.2 branch into the 'develop' branch.",
+          "gitAns": "git merge --no-ff release-1.2"
+        },
+        {
+          "gitQus": "-d option: Delete the branch corresponding to release-1.2",
+          "gitAns": "git branch -d release-1.2"
         }
       ]
     }

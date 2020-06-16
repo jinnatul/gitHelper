@@ -5,7 +5,7 @@ $(function() {
       let gitBasicStr = "<ul class='collapsible expandable'>";
 
       // Part-1 Git basic
-      git_Basic(res.gitBasic, gitBasicStr);
+      git_Basic(res.data, gitBasicStr);
 
       // Copy clipBoard
       copyData_ClipBoard();
@@ -82,6 +82,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += blame(data[14], gitBasicStr);
   // Clean
   retrunStr += clean(data[15], gitBasicStr);
+  // Gitignore
+  retrunStr += gitignore(data[16], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -321,6 +323,20 @@ function clean(data, gitBasicStr) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDclean-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='clean-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Gitignore
+function gitignore(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDgitignore-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='gitignore-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
