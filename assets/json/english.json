@@ -250,7 +250,243 @@
           "gitQus": "Commit is canceled and the files are unstagedand deleted from the working directory",
           "gitAns": "git reset --hard HEAD^"
         }
-        
+      ]
+    },
+    {
+      "title": "$ Clearing the commit (Advanced)",
+      "items": [
+        {
+          "gitQus": "Return to commit in the working directory-Cancels the most recent commit and returns the working directory",
+          "gitAns": "git reset HEAD^"
+        },
+        {
+          "gitQus": "Reflog(the branch and commit that HEAD has pointed to in the last few months)",
+          "gitAns": "git reflog"
+        },
+        {
+          "gitQus": "Return the working directory to the desired point in time",
+          "gitAns": "git log –g"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git reset"
+        },
+        {
+          "gitQus": "Commit again with reverted",
+          "gitAns": "git commit -m 'Write commit messages'"
+        },
+        {
+          "gitQus": "Force push to remote storage",
+          "gitAns": "git push origin branch_name–f"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git push origin + branch_name"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git push origin +master"
+        }
+      ]
+    },
+    {
+      "title": "$ Revert",
+      "items": [
+        {
+          "gitQus": "Revert single commit",
+          "gitAns": "git revert commit_idex"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git revert 2664ce8"
+        },
+        {
+          "gitQus": "If you need to commit multiple commits at onc",
+          "gitAns": "git revert start_commit_id...end_commit_id"
+        }
+      ]
+    },
+    {
+      "title": "$ Pull Request",
+      "items": [
+        {
+          "gitQus": "Go to https://github.com/jinnatul/git-helper",
+          "gitAns": "Click Fork Button"
+        },
+        {
+          "gitQus": "Downloading Forked Project ",
+          "gitAns": "git clone project_url_forked_in_your_account"
+        },
+        {
+          "gitQus": "Move Clone Project Directory ",
+          "gitAns": "cd clone_project_directory_name"
+        },
+        {
+          "gitQus": "Create branch (develop) for pull-request",
+          "gitAns": "git checkout -b develop"
+        },
+        {
+          "gitQus": "Move pull_request_testdirectory",
+          "gitAns": "cd pull_request_test"
+        },
+        {
+          "gitQus": "Create a directory with your name",
+          "gitAns": "mkdir your_name"
+        },
+        {
+          "gitQus": "Create a new file in Directory",
+          "gitAns": "touch any_name.txt"
+        },
+        {
+          "gitQus": "Go to Parent Directory",
+          "gitAns": "cd .."
+        },
+        {
+          "gitQus": "Add the working directory",
+          "gitAns": "git add your_name"
+        },
+        {
+          "gitQus": "Prepared files commit",
+          "gitAns": "git commit –m 'your_namepull request test'"
+        },
+        {
+          "gitQus": "Push to the develop branch of the forked repository (note: not master)",
+          "gitAns": "git push origin develop"
+        }
+      ]
+    },
+    {
+      "title": "$ Merge",
+      "items": [
+        {
+          "gitQus": "Make sure that your just-in-progress develop branch is the current branch (also visible as status)",
+          "gitAns": "git branch"
+        },
+        {
+          "gitQus": "Let's create an additional branch",
+          "gitAns": "git checkout -b test"
+        },
+        {
+          "gitQus": "Create an empty file with touch and make a commit",
+          "gitAns": "touch test"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git add test"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git commit -m 'test'"
+        },
+        {
+          "gitQus": "Merge additional branches (test) based on the current branch (develop).",
+          "gitAns": "git checkout develop"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git merge test"
+        }
+      ]
+    },
+    {
+      "title": "$ Rebase",
+      "items": [
+        {
+          "gitQus": "On Stage 8, go to the project path that was cloned after the fork and add upstream(This is not your project URL)",
+          "gitAns": "git remote add upstream https://github.com/jinnatul/git-helper.git"
+        },
+        {
+          "gitQus": "get upstream'sdevelop branch.",
+          "gitAns": "git fetch upstream develop"
+        },
+        {
+          "gitQus": "Make sure your current branch is develop",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Rebase",
+          "gitAns": "git rebase upstream/develop"
+        }
+      ]
+    },
+    {
+      "title": "$ Rebase--interactive",
+      "items": [
+        {
+          "gitQus": "Select the commit to modify",
+          "gitAns": "git rebase -i--root"
+        },
+        {
+          "gitQus": "Check status and check if rebase is normal",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Modify the commit information and finish with --continue",
+          "gitAns": "git commit --amend"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git rebase --continue"
+        }
+      ]
+    },
+    {
+      "title": "$ Blame",
+      "items": [
+        {
+          "gitQus": "Identify which file, who modified which line.",
+          "gitAns": "git blame report_card.c"
+        },
+        {
+          "gitQus": "Check commit information at the time using commit ID",
+          "gitAns": "git show <commit ID>"
+        }
+      ]
+    },
+    {
+      "title": "$ Clean",
+      "items": [
+        {
+          "gitQus": "Only delete files except directories",
+          "gitAns": "git clean -f"
+        },
+        {
+          "gitQus": "Delete directory inclusion",
+          "gitAns": "git clean -f -d"
+        },
+        {
+          "gitQus": "Delete even ignored files",
+          "gitAns": "git clean -f -d -x"
+        }
+      ]
+    },
+    {
+      "title": "$ Gitignore",
+      "items": [
+        {
+          "gitQus": "Make .gitignore",
+          "gitAns": "touch .gitignore"
+        },
+        {
+          "gitQus": "Delete all caches in the current repository.",
+          "gitAns": "git rm -r --cached"
+        },
+        {
+          "gitQus": "Delete the file corresponding to file_namefrom the remote repository.(Do not delete files in the local repository)",
+          "gitAns": "git rm -r --cached file_name"
+        },
+        {
+          "gitQus": "Set to track all other files again, except for the list of files put in .gitignore.",
+          "gitAns": "git add ."
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git commit -m 'Fixed untracked files'"
+        }
       ]
     }
   ]
