@@ -1,5 +1,7 @@
 $(function() {
- 
+  
+  $("main").hide();
+
   $.getJSON('assets/json/english.json', function() {})
     .done(function(res) {
 
@@ -547,7 +549,7 @@ function createNewBranch(data) {
 }
 
 // Push the branch to the central remote repository
-function pushTheBranchToTheCentralRemoteRepository() {
+function pushTheBranchToTheCentralRemoteRepository(data) {
   let gitStr = ""
   gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitStr += "<div class='collapsible-body codejs center'><table>"; 
@@ -557,7 +559,7 @@ function pushTheBranchToTheCentralRemoteRepository() {
 }
 
 // Send a full request to the project manager
-function sendFullRequestToTheProjectManager() {
+function sendFullRequestToTheProjectManager(data) {
   let gitStr = ""
   gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitStr += "<div class='collapsible-body codejs center'><table>"; 
@@ -577,7 +579,7 @@ function synchronization(data) {
 }
 
 // Create another branch for the new function
-function createAnotherBranchForTheNewFunction() {
+function createAnotherBranchForTheNewFunction(data) {
   let gitStr = ""
   gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitStr += "<div class='collapsible-body codejs center'><table>"; 
@@ -588,3 +590,62 @@ function createAnotherBranchForTheNewFunction() {
 
 /******* Part-4 Git Forking-Workflow*******/
 
+// Fork the central remote repository
+function forkTheCentralRemoteRepository(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}
+
+// Create a local repository with the git clone command
+function  createLocalRepositoryWithTheGitCloneCommand(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}
+
+// Connect two remote repositories
+function  connectTwoRemoteRepositories(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}
+
+// Check branch location
+function  checkBranchLocation(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}
+
+// Create a new branch for functional development
+function  createNewBranchForFunctionalDevelopment(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}
+
+// Push the commit history to your remote repository
+function  pushTheCommitHistoryToYourRemoteRepository(data) {
+  let gitStr = ""
+  gitStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitStr += "<div class='collapsible-body codejs center'><table>"; 
+
+  gitStr += "</table></div></li>";
+  return gitStr;
+}

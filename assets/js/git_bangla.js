@@ -4,20 +4,9 @@ $(function() {
 
   $.getJSON('assets/json/bangla.json', function() {})
     .done(function(res) {
-      ইনসটল(res.gitData[0]);
-      কনফিগ(res.gitData[1]);
-      সাধারণ(res.gitData[2]);
-      রিসেট(res.gitData[3]);
-      আপডেট_এবং_ডিলিট(res.gitData[4]);
-      বাঞচ(res.gitData[5]);
-      মারজ(res.gitData[6]);
-      সটাশ(res.gitData[7]);
-      লগ(res.gitData[8]);
-      তুলনা(res.gitData[9]);
-      রিলিজ_এবং_ভারসন(res.gitData[10]);
-      সহযোগিতা(res.gitData[11]);
-      গিট_ফলো(res.gitData[12]);
-      গিটহাব_ইসু(res.gitData[13]);
+
+      // Get data from functions
+      getDataFromFun(res);
 
       // Copy clipBoard
       copyData_ClipBoard();
@@ -58,6 +47,24 @@ function showMaterialToast(data, style) {
   });
 }
 
+function getDataFromFun(res) {
+  ইনসটল(res.gitData[0]);
+  কনফিগ(res.gitData[1]);
+  সাধারণ(res.gitData[2]);
+  রিসেট(res.gitData[3]);
+  আপডেট_এবং_ডিলিট(res.gitData[4]);
+  বাঞচ(res.gitData[5]);
+  মারজ(res.gitData[6]);
+  সটাশ(res.gitData[7]);
+  লগ(res.gitData[8]);
+  তুলনা(res.gitData[9]);
+  রিলিজ_এবং_ভারসন(res.gitData[10]);
+  সহযোগিতা(res.gitData[11]);
+  গিট_ফলো(res.gitData[12]);
+  গিটহাব_ইসু(res.gitData[13]);
+}
+
+// Insert
 function ইনসটল(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>"; 
   for (let index = 0; index < data.items.length; index++) {
@@ -70,6 +77,7 @@ function ইনসটল(data) {
   $('#gitInstall').html(tableData);
 }
 
+// Config
 function কনফিগ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -82,6 +90,7 @@ function কনফিগ(data) {
   $('#gitConfig').html(tableData);
 }
 
+// General
 function সাধারণ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -94,6 +103,7 @@ function সাধারণ(data) {
   $('#gitGeneral').html(tableData);
 }
 
+// Reset
 function রিসেট(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -106,6 +116,7 @@ function রিসেট(data) {
   $('#gitReset').html(tableData);
 }
 
+// Update & delete
 function আপডেট_এবং_ডিলিট(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -118,6 +129,7 @@ function আপডেট_এবং_ডিলিট(data) {
   $('#gitUpdateDelete').html(tableData);
 }
 
+// Branch
 function বাঞচ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -130,6 +142,7 @@ function বাঞচ(data) {
   $('#gitBranch').html(tableData);
 }
 
+// Merge
 function মারজ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -142,6 +155,7 @@ function মারজ(data) {
   $('#gitMerge').html(tableData);
 }
 
+// Stash
 function সটাশ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -154,6 +168,7 @@ function সটাশ(data) {
   $('#gitStash').html(tableData);
 }
 
+// Log
 function লগ(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -166,6 +181,7 @@ function লগ(data) {
   $('#gitLog').html(tableData);
 }
 
+// Compare
 function তুলনা(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -178,6 +194,7 @@ function তুলনা(data) {
   $('#gitCompare').html(tableData);
 }
 
+// Release & version
 function রিলিজ_এবং_ভারসন(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -190,6 +207,7 @@ function রিলিজ_এবং_ভারসন(data) {
   $('#gitReleasesVersion').html(tableData);
 }
 
+// Collaborate
 function সহযোগিতা(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -202,6 +220,7 @@ function সহযোগিতা(data) {
   $('#gitCollaborate').html(tableData);
 }
 
+// Git flow
 function গিট_ফলো(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index++) {
@@ -214,6 +233,7 @@ function গিট_ফলো(data) {
   $('#gitFlow').html(tableData);
 }
 
+// Git Issue
 function গিটহাব_ইসু(data) {
   let tableData = "<table><tr><h5 class='center-align blue-text'>"+ data.title +"</h5></tr>";
   for (let index = 0; index < data.items.length; index+=3) {
