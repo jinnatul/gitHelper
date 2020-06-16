@@ -1,0 +1,257 @@
+{
+  "gitBasic": [
+    {
+      "title": "$ What is Git?",
+      "items": [
+        {
+          "gitQus": "* What is Git?",
+          "gitAns": "Git is a free and distributed version-control system for tracking changes in source code during software development. <br>It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. <br>Its goals include speed, data integrity, and support for distributed, non-linear workflows."
+        },
+        {
+          "gitQus": "* What is the purpose of Git?",
+          "gitAns": "Git (/ɡɪt/) is a version control system for tracking changes in computer files and coordinating work on those files among <br> multiple people. It is primarily used for source code management in software development, but it can be used to <br>keep track of changes in any set of files."
+        },
+        {
+          "gitQus": "* What is git vs GitHub?",
+          "gitAns": "The key difference between Git and GitHub is that Git is an open-source tool developers install locally to manage <br>source code, while GitHub is an online service to which developers who use Git can connect and <br>upload or download resources."
+        }
+      ]
+    },
+    {
+      "title": "$ Download Git",
+      "items": [
+        {
+          "gitQus": "- Windows :",
+          "gitAns": "<a href='https://git-scm.com/download/win' target='_blank'>[Download]</a> and Install program then run the git bash icon."
+        },
+        {
+          "gitQus": "- Mac :",
+          "gitAns": "ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "brew doctor"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "brew install git"
+        },
+        {
+          "gitQus": "- Linux :",
+          "gitAns": "sudo apt-get update"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "sudo apt-get upgrade"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "sudo apt-get install git"
+        }
+      ]
+    },
+    {
+      "title": "$ Initialization and initial commit",
+      "items": [
+        {
+          "gitQus": "Go to HOME path (~)",
+          "gitAns": "cd ~"
+        },
+        {
+          "gitQus": "Create git-training folder",
+          "gitAns": "mkdir git-training"
+        },
+        {
+          "gitQus": "Move the path (check the current path with the pwd command)",
+          "gitAns": "cd git-training"
+        },
+        {
+          "gitQus": "Initialize the folder git (see the .git folder created with the ls -A command)",
+          "gitAns": "git init"
+        },
+        {
+          "gitQus": "Add PDF file (add to commit list add) (use file in commit1 folder)",
+          "gitAns": "git add report_card.pdf"
+        },
+        {
+          "gitQus": "Making the first commit (creating a unit of history)",
+          "gitAns": "git commit -m 'report card: Add question PDF'"
+        },
+        {
+          "gitQus": "Add source code (add to commit list add) (use files in commit2 folder)",
+          "gitAns": "git add report_card.c"
+        },
+        {
+          "gitQus": "commit (make history unit)",
+          "gitAns": "git commit -m 'report card: Add base code'"
+        } 
+      ]
+    },
+    {
+      "title": "$ Initialization and initial commit",
+      "items": [
+        {
+          "gitQus": "Check the status",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Change or overwrite the contents of the report_card.c source file in the commit3 folder and check",
+          "gitAns": "git diff"
+        },
+        {
+          "gitQus": "If you confirm the change through diff, proceed to add command",
+          "gitAns": "git add report_card.c"
+        },
+        {
+          "gitQus": "Commit the prepared source file",
+          "gitAns": "git commit -m 'report card: Print a message of introduction'"
+        },
+        {
+          "gitQus": "Check three commit so far",
+          "gitAns": "git log"
+        },
+        {
+          "gitQus": "Change or overwrite the contents of the report_card.c source file in the commit4 folder and check",
+          "gitAns": "git diff"
+        },
+        {
+          "gitQus": "If you confirm the change through diff, proceed to add command",
+          "gitAns": "git add report_card.c"
+        },
+        {
+          "gitQus": "Commit the prepared source file",
+          "gitAns": "git commit -m 'report card: Print grades of each subject'"
+        },
+        {
+          "gitQus": "Check four commit so far",
+          "gitAns": "git log"
+        }
+      ]
+    },
+    {
+      "title": "$ Include your signature in commit",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": "git diff"
+        },
+        {
+          "gitQus": "If you confirm the change through diff, proceed to add command",
+          "gitAns": "git add report_card.c"
+        },
+        {
+          "gitQus": "Commit with signature (Include signatures with the -s option.)",
+          "gitAns": "git commit -sm 'report card: Show the sum of each grade'"
+        },
+        {
+          "gitQus": "Change or overwrite the contents of the report_card.c source file in the commit6 folder and check",
+          "gitAns": "git diff"
+        },
+        {
+          "gitQus": "If you confirm the change through diff, proceed to add command",
+          "gitAns": "git add report_card.c"
+        },
+        {
+          "gitQus": "Commit with signature",
+          "gitAns": "git commit -sm 'report card: Get a average of grades'"
+        }
+      ]
+    },
+    {
+      "title": "$ Let's push commit so far",
+      "items": [
+        {
+          "gitQus": "Check the status and check the current branch name master",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Check the commit so far (if not six, check again)",
+          "gitAns": "git shortlog"
+        },
+        {
+          "gitQus": "Register GitHub remote repository URL(Pause and turn on http://github.com and create a new repository) Register GitHub remote repository with the copied URL (except for '<' and '>')",
+          "gitAns": "git remote add origin"
+        },
+        {
+          "gitQus": "Now let's push the work to the GitHub remote repository (origin).",
+          "gitAns": "git push origin master"
+        }
+      ]
+    },
+    {
+      "title": "$ Cancel add",
+      "items": [
+        {
+          "gitQus": "Create and add an empty file with touch (it is possible to execute commands consecutively with ';')",
+          "gitAns": "touch test"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git add test"
+        },
+        {
+          "gitQus": "Check your current status",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Let's cancel the add command with reset command",
+          "gitAns": "git reset"
+        },
+        {
+          "gitQus": "Check your current status again",
+          "gitAns": "git status"
+        }
+      ]
+    },
+    {
+      "title": "$ Clearing the commit",
+      "items": [
+        {
+          "gitQus": "Make sure the test file still exists (re-create it if you deleted it)",
+          "gitAns": "git status"
+        },
+        {
+          "gitQus": "Make some wrong commit. (Can execute commands consecutively)",
+          "gitAns": "git add test"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git commit -sm'test'"
+        },
+        {
+          "gitQus": "Then push and apply the wrong commit to the tree in GitHub.",
+          "gitAns": "git push origin master"
+        },
+        {
+          "gitQus": "And clears the most recent commit.",
+          "gitAns": "git reset HEAD~1"
+        },
+        {
+          "gitQus": "Force push to the remote repository tree to clear the wrong commit",
+          "gitAns": "git push origin master --force"
+        },
+        {
+          "gitQus": "Commit is canceled and the files are staged and saved in working directory",
+          "gitAns": "git reset --soft HEAD^"
+        },
+        {
+          "gitQus": "Commit is canceled and the files are unstagedand saved in the working directory.",
+          "gitAns": "git reset --mixed HEAD^"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git reset HEAD^"
+        },
+        {
+          "gitQus": "",
+          "gitAns": "git reset HEAD~2"
+        },
+        {
+          "gitQus": "Commit is canceled and the files are unstagedand deleted from the working directory",
+          "gitAns": "git reset --hard HEAD^"
+        }
+        
+      ]
+    }
+  ]
+}

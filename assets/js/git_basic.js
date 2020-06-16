@@ -3,120 +3,54 @@ $(function() {
   let gitInfo = "<ul class='collapsible expandable'>"
 
   // What is Git?
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ What is Git?</h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'><span class='codejs-keyword'>"
-  + "Git</span> is a free and distributed version-control system for tracking changes in source "
-  + "code during software development. It is designed for coordinating work among programmers, but it "
-  + "can be used to track changes in any set of files. Its goals include speed, "
-  + "data integrity, and support for distributed, non-linear workflows.</p></div></li>"
+  gitInfo += "<li><div class='collapsible-header'>"
+  gitInfo += "<h6>$ What is Git?</h6></div>"
+  gitInfo += "<div class='collapsible-body codejs center'><p class='fontSize'><span class='codejs-keyword'>"
+  gitInfo += "Git</span> is a free and distributed version-control system for tracking changes in source "
+  gitInfo += "code during software development. It is designed for coordinating work among programmers, but it "
+  gitInfo += "can be used to track changes in any set of files. Its goals include speed, "
+  gitInfo += "data integrity, and support for distributed, non-linear workflows.</p></div></li>"
 
   // What is the purpose of Git?
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ What is the purpose of Git?</h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'><span class='codejs-keyword'>Git</span>"
-  + " (/ɡɪt/) is a version control system for tracking changes in computer files and coordinating work "
-  + "on those files among multiple people. It is primarily used for source code management in software "
-  + "development, but it can be used to keep track of changes in any set of files.</p></div></li>"
+  gitInfo += "<li><div class='collapsible-header'>"
+  gitInfo += "<h6>$ What is the purpose of Git?</h6></div>"
+  gitInfo += "<div class='collapsible-body codejs center'><p class='fontSize'><span class='codejs-keyword'>Git</span>"
+  gitInfo += " (/ɡɪt/) is a version control system for tracking changes in computer files and coordinating work "
+  gitInfo += "on those files among multiple people. It is primarily used for source code management in software "
+  gitInfo += "development, but it can be used to keep track of changes in any set of files.</p></div></li>"
 
   // What is git vs GitHub?
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ What is git vs GitHub?</h6></div>"
-  + "<div class='collapsible-body codejs center'><p class='fontSize'></p>The key difference between "
-  + "<span class='codejs-keyword'>Git</span> and <span class='codejs-keyword'>GitHub</span> is that "
-  + "<span class='codejs-keyword'>Git</span> is an open-source tool developers install locally to manage "
-  + "source code, while <span class='codejs-keyword'>GitHub</span> is an online service to which "
-  + "developers who use <span class='codejs-keyword'>Git</span> can connect and upload or download "
-  + "resources.<img class='responsive-img' src='assets/img/git-github.jpg' alt='git-github'></div></li>"
+  gitInfo += "<li><div class='collapsible-header'>"
+  gitInfo += "<h6>$ What is git vs GitHub?</h6></div>"
+  gitInfo += "<div class='collapsible-body codejs center'><p class='fontSize'></p>The key difference between "
+  gitInfo += "<span class='codejs-keyword'>Git</span> and <span class='codejs-keyword'>GitHub</span> is that "
+  gitInfo += "<span class='codejs-keyword'>Git</span> is an open-source tool developers install locally to manage "
+  gitInfo += "source code, while <span class='codejs-keyword'>GitHub</span> is an online service to which "
+  gitInfo += "developers who use <span class='codejs-keyword'>Git</span> can connect and upload or download "
+  gitInfo += "resources.<img class='responsive-img' src='assets/img/git-github.jpg' alt='git-github'></div></li>"
 
   // Download Git
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Download Git</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ downloadGit() +"</div></li>"
+  gitInfo += "<li><div class='collapsible-header'>"
+  gitInfo += "<h6>$ Download Git</h6></div>"
+  gitInfo += "<div class='collapsible-body codejs'>"+ downloadGit() +"</div></li>";
 
-  // Initialization and initial commit
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Initialization and initial commit</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ initializationAndInitialCommit() +"</div></li>"
-
-  // Using diff and making additional commit
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Using diff and making additional commit</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ usingDiffAndMakingAdditionalCommit() +"</div></li>"
-
-  // Include your signature in commit
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Include your signature in commit</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ includeYourSignatureInCommit() +"</div></li>"
-
-  // Let's push commit so far
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Let's push commit so far</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ letsPushCommitSoFar() +"</div></li>"
-
-  // Changing the commit (including commits from the remote repository)
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Changing the commit (including commits from the remote repository)</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ changingTheCommit() +"</div></li>"
-
-  // Cancel add
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Cancel add</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ cancelAdd() +"</div></li>"
-
-  // Clearing the commit
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Clearing the commit</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ clearingTheCommit() +"</div></li>"
-
-  // Clearing the commit (Advanced)
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Clearing the commit (Advanced)</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ clearingTheCommit_Advanced() +"</div></li>"
-
-  // revert
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ revert</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ revert() +"</div></li>"
-
-  // Pull Request
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Pull Request</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ pullRequest() +"</div></li>"
-
-  // Merge
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Merge</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ merge() +"</div></li>"
-
-  // Rebase
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Rebase</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ rebase() +"</div></li>"
-
-  // Rebase --interactive
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ Rebase --interactive</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ rebaseInteractive() +"</div></li>"
-
-  // blame
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ blame</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ blame() +"</div></li>"
-
-  // clean
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ clean</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ clean() +"</div></li>"
-
-  // gitignore
-  + "<li><div class='collapsible-header'>"
-  + "<h6>$ gitignore</h6></div>"
-  + "<div class='collapsible-body codejs'>"+ gitignore() +"</div></li>"
+  gitInfo += otherData() + "</ul>"
 
   $('#git_basic').html(gitInfo);
 
 })
+
+function otherData() {
+  $.getJSON('assets/json/english.json', function() {})
+    .done(function(res) {
+      console.log(res);
+      let gitInfo = "";
+      gitInfo += "<li><div class='collapsible-header'>"
+      gitInfo += "<h6>"+ res.gitBasic[0].title +"</h6></div>"
+      gitInfo += "<div class='collapsible-body codejs'>"+ res.gitBasic[0].items[0] +"</div></li>";
+      return gitInfo;
+    })
+}
 
 function downloadGit() {
   let code = "<code>"

@@ -1,11 +1,5 @@
 $(function () {
-  // preloader
-  $("main").hide();
-  setTimeout(function () {
-    $(".mainLoader").fadeOut();
-    $("main").show();
-  }, 1000);
-
+ 
   // collapsible
   $(document).ready(function () {
     $(".collapsible").collapsible();

@@ -1,5 +1,7 @@
 $(function() {
 
+  $("main").hide();
+
   $.getJSON('assets/json/bangla.json', function() {})
     .done(function(res) {
       ইনসটল(res.gitData[0]);
@@ -19,15 +21,21 @@ $(function() {
 
       // Copy clipBoard
       copyData_ClipBoard();
+
+      // preloader
+      setTimeout(function () {
+        $(".mainLoader").fadeOut();
+        $("main").show();
+      }, 1000);
+      
     })
     .fail(function() {
-      console.log('Problem ....here!');
+      showMaterialToast("Problem ....here! ", "red darken-4");
     });
-
-    
 
 });
 
+// ClipBoard
 function copyData_ClipBoard() {
   $(".content").on("click",function(){
     let currentId = 'ID' + this.id; 
