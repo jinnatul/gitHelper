@@ -68,6 +68,10 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += clearingTheCommit(data[7], gitBasicStr);
   // Clearing the commit Advance
   retrunStr += clearingTheCommitAdvance(data[8], gitBasicStr);
+  // Revert
+  retrunStr += revert(data[9], gitBasicStr);
+  // Pull Request
+  retrunStr += pullRequest(data[10], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -202,13 +206,41 @@ function clearingTheCommit(data, gitBasicStr) {
 
 // Clearing the commit Advance
 function clearingTheCommitAdvance(data, gitBasicStr) {
-  console.log(data);
   gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
   for (let index = 0; index < data.items.length; index++) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDclearingAd-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='clearingAd-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Revert
+function revert(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDrevert-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='revert-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Pull Request
+function pullRequest(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDpull-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    if (index < 3 || index == 4) continue;
+    gitBasicStr += "<td><a id='pull-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
