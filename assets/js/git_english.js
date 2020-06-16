@@ -62,6 +62,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += includeYourSignatureInCommit(data[4], gitBasicStr);
   // Let's push commit so far
   retrunStr += letsPushCommitSoFar(data[5], gitBasicStr);
+  // Cancel add
+  retrunStr += cancelAdd(data[6], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -140,13 +142,27 @@ function includeYourSignatureInCommit(data, gitBasicStr) {
 
 // Let's push commit so far
 function letsPushCommitSoFar(data, gitBasicStr) {
-  console.log(data);
   gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
   gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
   for (let index = 0; index < data.items.length; index++) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDletsPush-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='letsPush-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Cancel add
+function cancelAdd(data, gitBasicStr) {
+  console.log(data);
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDcancelAdd-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='cancelAdd-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";

@@ -183,7 +183,7 @@
       "items": [
         {
           "gitQus": "Create and add an empty file with touch (it is possible to execute commands consecutively with ';')",
-          "gitAns": "touch test"
+          "gitAns": "touch test;"
         },
         {
           "gitQus": "",
