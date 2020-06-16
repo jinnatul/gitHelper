@@ -546,6 +546,141 @@
           "gitAns": "git branch -d release-1.2"
         }
       ]
+    },
+    {
+      "title": "$ What is Feature Branch Workflow?",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Concept of Local Storage & Remote Storage",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Create a local repository with git clone",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Check branch location",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Create a new branch",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Push the branch to the central remote repository",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Send a full request to the project manager",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Synchronization",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Create another branch for the new function",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Fork the central remote repository",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Create a local repository with the git clone command",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Connect two remote repositories",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Check branch location",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Create a new branch for functional development",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
+    },
+    {
+      "title": "$ Push the commit history to your remote repository",
+      "items": [
+        {
+          "gitQus": "",
+          "gitAns": ""
+        }
+      ]
     }
   ]
 }
