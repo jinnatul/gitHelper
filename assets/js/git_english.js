@@ -72,6 +72,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += revert(data[9], gitBasicStr);
   // Pull Request
   retrunStr += pullRequest(data[10], gitBasicStr);
+  // Merge
+  retrunStr += merge(data[11], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -241,6 +243,20 @@ function pullRequest(data, gitBasicStr) {
     gitBasicStr += "<td id='IDpull-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     if (index < 3 || index == 4) continue;
     gitBasicStr += "<td><a id='pull-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Merge
+function merge(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDmerge-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='merge-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
