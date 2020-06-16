@@ -64,6 +64,8 @@ function git_Basic(data, gitBasicStr) {
   retrunStr += letsPushCommitSoFar(data[5], gitBasicStr);
   // Cancel add
   retrunStr += cancelAdd(data[6], gitBasicStr);
+  // Clearing the commit
+  retrunStr += clearingTheCommit(data[7], gitBasicStr);
 
   $('#git_basic').html(retrunStr + "</ui>")
 }
@@ -163,6 +165,21 @@ function cancelAdd(data, gitBasicStr) {
     gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
     gitBasicStr += "<td id='IDcancelAdd-"+ index +"'>"+ data.items[index].gitAns +"</td>"
     gitBasicStr += "<td><a id='cancelAdd-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Clearing the commit
+function clearingTheCommit(data, gitBasicStr) {
+  console.log(data);
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDclearing-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='clearing-"+ index +"' class='content'><i class='material-icons teal-text "
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
