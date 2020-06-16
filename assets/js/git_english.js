@@ -4,8 +4,11 @@ $(function() {
     .done(function(res) {
       let gitBasicStr = "<ul class='collapsible expandable'>";
 
-      // Part-1 Git basic
+      // Part-1 Git Basic
       git_Basic(res.data, gitBasicStr);
+
+      // Part-2 Git Branch
+      git_Branch(res.data, gitBasicStr);
 
       // Copy clipBoard
       copyData_ClipBoard();
@@ -47,8 +50,8 @@ function showMaterialToast(data, style) {
   });
 }
 
+// Part-1 Git Basic
 function git_Basic(data, gitBasicStr) {
-  console.log(data);
   let retrunStr = "";
   // What is Git?
   retrunStr += whatIsGit(data[0], gitBasicStr);
@@ -85,9 +88,24 @@ function git_Basic(data, gitBasicStr) {
   // Gitignore
   retrunStr += gitignore(data[16], gitBasicStr);
 
-  $('#git_basic').html(retrunStr + "</ui>")
+  $('#git_basic').html(retrunStr + "</ui>");
 }
 
+// Part-2 Git Branch
+function git_Branch(data, gitBasicStr) {
+  console.log(data);
+  let retrunStr = "";
+  // Feature Branch creation & termination
+  retrunStr += staticbranchStr1(gitBasicStr);
+  // Feature Branch creation & termination
+  retrunStr += featureBranchCreationTermination(data[17], gitBasicStr);
+  // Release Branch creation & termination
+  retrunStr += releaseBranchCreationTermination(data[18], gitBasicStr);
+
+  $('#git_branchs').html(retrunStr + "</ui>");
+}
+
+/******* Part-1 Git Basic *******/
 // What is Git?
 function whatIsGit(data, gitBasicStr) {
   gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
@@ -340,5 +358,63 @@ function gitignore(data, gitBasicStr) {
     gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
   }
   gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+/******* Part-2 Git Branch *******/
+// Static Branch Str
+function staticbranchStr1(gitBasicStr) {
+  // Master Branch
+  gitBasicStr += "<li><div class='collapsible-header'>"
+  gitBasicStr += "<h6>$ Master Branch</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs'><img class='responsive-img' "
+  gitBasicStr += "src='assets/img/masterBranch.png' alt='masterBranch'></div></li>"
+
+  // Develop Branch
+  gitBasicStr += "<li><div class='collapsible-header'>"
+  gitBasicStr += "<h6>$ Develop Branch</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs'><img class='responsive-img' "
+  gitBasicStr += "src='assets/img/developBranch.png' alt='developBranch'></div></li>"
+
+  // Feature Branch
+  gitBasicStr += "<li><div class='collapsible-header'>"
+  gitBasicStr += "<h6>$ Feature Branch</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs'><img class='responsive-img' "
+  gitBasicStr += "src='assets/img/featureBranch.png' alt='featureBranch'></div></li>"
+  return gitBasicStr;
+}
+
+// Feature Branch creation & termination
+function featureBranchCreationTermination(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDfeatureBranchCreation-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='featureBranchCreation-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+  return gitBasicStr;
+}
+
+// Release Branch creation & termination
+function releaseBranchCreationTermination(data, gitBasicStr) {
+  gitBasicStr += "<li><div class='collapsible-header'><h6>"+ data.title +"</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs center'><table>"; 
+  for (let index = 0; index < data.items.length; index++) {
+    gitBasicStr += "<tr><td>"+ data.items[index].gitQus +"</td>"
+    gitBasicStr += "<td id='IDreleaseBranchCreation-"+ index +"'>"+ data.items[index].gitAns +"</td>"
+    gitBasicStr += "<td><a id='releaseBranchCreation-"+ index +"' class='content'><i class='material-icons teal-text "
+    gitBasicStr += "text-darken-1'>file_copy</i>copy</a></td></tr>"
+  }
+  gitBasicStr += "</table></div></li>";
+
+  // The whole flow of the branch
+  gitBasicStr += "<li><div class='collapsible-header'>"
+  gitBasicStr += "<h6>$ The whole flow of the branch</h6></div>"
+  gitBasicStr += "<div class='collapsible-body codejs'><img class='responsive-img' "
+  gitBasicStr += "src='assets/img/branchs.png' alt='branchs'></div></li>"
+
   return gitBasicStr;
 }
