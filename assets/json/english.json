@@ -132,7 +132,7 @@
       "title": "$ Include your signature in commit",
       "items": [
         {
-          "gitQus": "",
+          "gitQus": "Change or overwrite the contents of the report_card.c source file in the commit5 folder and check",
           "gitAns": "git diff"
         },
         {
