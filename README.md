@@ -1,11 +1,13 @@
+<p align="center">
+  <img width="500" height="300" src="https://user-images.githubusercontent.com/31995155/85232365-258a5f80-b420-11ea-8952-f90b4924ae7d.jpg">
+</p>
+
 # git-Helper
 
-### Web-responsibe
-![eng](https://user-images.githubusercontent.com/31995155/84778314-a4d4f900-b004-11ea-8468-6cb937fc1b13.png)
-![bangla](https://user-images.githubusercontent.com/31995155/84778540-f67d8380-b004-11ea-981e-6c7859388e78.png)
-
-### Mobile-responsibe
-![2](https://user-images.githubusercontent.com/31995155/84664353-40e8fc80-af40-11ea-823c-5bbcccec068c.png)
+|                                             **Web-responsibe - 1**                                          |                       **Web-responsibe - 2**                                         |                                   **Mobile-responsibe**                                       | 
+ | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+| ![eng](https://user-images.githubusercontent.com/31995155/84778314-a4d4f900-b004-11ea-8468-6cb937fc1b13.png) | ![bangla](https://user-images.githubusercontent.com/31995155/84778540-f67d8380-b004-11ea-981e-6c7859388e78.png) | ![jinnatul github io_gitHelper_gitEnglish html(iPad)](https://user-images.githubusercontent.com/31995155/85232483-ef99ab00-b420-11ea-93cb-3fd47573e201.png)
+ |
 
 ## Can I contribute to this project? :smiley:
 
